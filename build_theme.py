@@ -20,10 +20,10 @@ with open("VERSION", "r") as f:
     values["version"] = f.read().strip()
 
 # run templating
-with open("template.j2", "r") as f:
+with open("vscode.j2", "r") as f:
     template = Template(f.read())
 
-output_path = "{}-{}".format(palette.slug, values["version"])
+output_path = "{}-{}.json".format(palette.slug, values["version"])
 with open(output_path, "w") as f:
     f.write(template.render(**values))
     print("Output written to {}".format(output_path))

@@ -1,0 +1,185 @@
+{
+	"name": "{{ name }} {{ version }}",
+	"type": "dark",
+	"colors": {
+		"editor.background":                   "#{{ bg_0 }}",
+		"editor.foreground":                   "#{{ fg_0 }}",
+		"editorCursor.foreground":             "#{{ fg_0 }}",
+		"editorLineNumber.foreground":         "#{{ dim_0 }}",
+		"editorLineNumber.activeForeground":   "#{{ fg_0 }}",
+		"editorIndentGuide.background":        "#{{ bg_2 }}",
+		"editorIndentGuide.activeBackground":  "#{{ dim_0 }}",
+		"editor.selectionBackground":          "#{{ bg_2 }}",
+		"editor.inactiveSelectionBackground":  "#{{ bg_1 }}",
+		"editor.selectionHighlightBackground": "#{{ bg_0 }}",
+		"editor.selectionHighlightBorder":     "#{{ bg_2 }}"
+	},
+	"tokenColors": [
+		{
+			"scope": "comment",
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#{{ dim_0 }}"
+			}
+		},
+		{
+			"name": "keywords (including function and class defs)",
+			"scope": [
+				"keyword.control",
+				"storage.type.function",
+				"storage.type.class"
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#{{ fg_1 }}"
+			}
+		},
+		{
+			"scope": "keyword.operator",
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#{{ fg_1 }}"
+			}
+		},
+		{
+			"name": "imports",
+			"scope": [
+				"keyword.control.import",
+				"keyword.other.import"
+			],
+			"settings": {
+				"fontStyle": "underline",
+				"foreground": "#{{ fg_2 }}"
+			}
+		},
+		{
+			"scope": "string",
+			"settings": {
+				"foreground": "#{{ dim_1 }}"
+			}
+		},
+		{
+			"name": "docstrings and other multiline strings",
+			"scope": [
+				"string.unquoted",
+				"string.quoted.docstring.multi"
+			],
+			"settings": {
+				"foreground": "#{{ dim_0 }}"
+			}
+		},
+		{
+			"scope": "constant",
+			"settings": {
+				"foreground": "#{{ fg_1 }}"
+			}
+		},
+		{
+			"scope": "constant.numeric",
+			"settings": {
+				"foreground": "#{{ fg_2 }}"
+			}
+		},
+		{
+			"name": "string interpolation",
+			"scope": [
+				"string.constant.character.escape",
+				"constant.character.format",
+				"constant.character.escape",
+				"punctuation.section.embedded",
+				"punctuation.definition.template-expression.begin",
+				"punctuation.definition.template-expression.end",
+				"storage.type.string"
+			],
+			"settings": {
+				"foreground": "#{{ fg_1 }}"
+			}
+		},
+		{
+			"scope": "storage",
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#{{ dim_0 }}"
+			}
+		},
+		{
+			"name": "const, final, abstract etc.",
+			"scope": "storage.modifier",
+			"settings": {
+				"foreground": "#{{ dim_1 }}"
+			}
+		},
+		{
+			"name": "Name of the defined entity",
+			"scope": "entity.name",
+			"settings": {
+				"fontStyle": "bold underline",
+				"foreground": "#{{ fg_2 }}"
+			}
+		},
+		{
+			"scope": "entity.name.function.decorator",
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#{{ dim_1 }}"
+			}
+		},
+		{
+			"scope": "variable",
+			"settings": {
+				"foreground": "#{{ fg_0 }}"
+			}
+		},
+		{
+			"name": "Almost every variable in JS is in this scope",
+			"scope": "variable.other",
+			"settings": {
+				"foreground": "#{{ fg_0 }}"
+			}
+		},
+		{
+			"name": "reserved language variables like this, super, self",
+			"scope": "variable.language",
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#{{ dim_1 }}"
+			}
+		},
+		{
+			"name": "stuff from library/framework",
+			"scope": "support",
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#{{ dim_1 }}"
+			}
+		},
+		{
+			"scope": "support.type.exception",
+			"settings": {
+				"fontStyle": "underline",
+				"foreground": "#{{ fg_2 }}"
+			}
+		},
+		{
+			"name": "dots, parens etc. (token separators)",
+			"scope": [
+				"punctuation.definition.block",
+				"punctuation.definition.parameters",
+				"punctuation.definition.arguments",
+				"punctuation.definition.list",
+				"punctuation.definition.dict",
+				"punctuation.definition.binding-pattern",
+				"punctuation.section.block",
+				"punctuation.section.function",
+				"punctuation.section.method",
+				"punctuation.section.class",
+				"punctuation.section.array",
+				"punctuation.separator",
+				"punctuation.accessor"
+			],
+			"settings": {
+				"foreground": "#{{ fg_1 }}"
+			}
+		}
+	]
+}
