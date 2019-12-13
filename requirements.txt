@@ -1,0 +1,2 @@
+colormath
+python-slugify
