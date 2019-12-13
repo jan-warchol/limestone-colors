@@ -29,6 +29,27 @@ class Palette(object):
 
         self.build_shades(shade_specs)
 
+    @classmethod
+    def load_from_module(cls, module_name):
+        import importlib
+        config = importlib.import_module(module_name)
+        return cls(config.name,
+                   config.background,
+                   config.foreground,
+                   config.shades)
+
+    @classmethod
+    def load_from_path(cls, path):
+        """Dynamically import module with specifications from path."""
+        import os, sys
+        module_dir = os.path.dirname(path)
+        if module_dir not in sys.path:
+            sys.path.insert(0, module_dir)
+
+        file_name = os.path.basename(path)
+        module_name = file_name.replace(".py", "")
+        return cls.load_from_module(module_name)
+
     def build_shades(self, shade_specs):
         """Calculate supplemental shades according to their naming."""
         for name, lightness in shade_specs.items():
@@ -71,13 +92,13 @@ class Palette(object):
 
 
 if __name__ == "__main__":
-    """Print RGB coordinates calculated from palette_spec, for debugging."""
+    """Print RGB coordinates of the resulting palette for debugging."""
     import sys
     import pprint
-    import palette_spec as config
 
-    p = Palette(config.name,
-                config.background,
-                config.foreground,
-                config.shades)
+    if len(sys.argv) < 2:
+        print("Missing argument: path to the module with palette specification")
+        sys.exit()
+
+    p = Palette.load_from_path(sys.argv[1])
     pprint.pprint(p.rgb_values())
