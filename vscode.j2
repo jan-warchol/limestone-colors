@@ -38,7 +38,7 @@
 			"scope": "keyword.operator",
 			"settings": {
 				"fontStyle": "bold",
-				"foreground": "#{{ fg_1 }}"
+				"foreground": "#{{ fg_0 }}"
 			}
 		},
 		{
@@ -48,14 +48,15 @@
 				"keyword.other.import"
 			],
 			"settings": {
-				"fontStyle": "underline",
-				"foreground": "#{{ fg_2 }}"
+				"fontStyle": "bold",
+				"foreground": "#{{ fg_1 }}"
 			}
 		},
 		{
 			"scope": "string",
 			"settings": {
-				"foreground": "#{{ dim_1 }}"
+				"fontStyle": "bold",
+				"foreground": "#{{ dim_0 }}"
 			}
 		},
 		{
@@ -65,19 +66,29 @@
 				"string.quoted.docstring.multi"
 			],
 			"settings": {
+				"fontStyle": "bold italic",
 				"foreground": "#{{ dim_0 }}"
 			}
 		},
 		{
 			"scope": "constant",
 			"settings": {
-				"foreground": "#{{ fg_1 }}"
+				"fontStyle": "normal",
+				"foreground": "#{{ fg_0 }}"
 			}
 		},
 		{
 			"scope": "constant.numeric",
 			"settings": {
-				"foreground": "#{{ fg_2 }}"
+				"fontStyle": "normal",
+				"foreground": "#{{ fg_0 }}"
+			}
+		},
+		{
+			"scope": "constant.language",
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#{{ fg_0 }}"
 			}
 		},
 		{
@@ -92,13 +103,14 @@
 				"storage.type.string"
 			],
 			"settings": {
+				"fontStyle": "normal",
 				"foreground": "#{{ fg_1 }}"
 			}
 		},
 		{
 			"scope": "storage",
 			"settings": {
-				"fontStyle": "italic",
+				"fontStyle": "bold italic",
 				"foreground": "#{{ dim_0 }}"
 			}
 		},
@@ -106,22 +118,31 @@
 			"name": "const, final, abstract etc.",
 			"scope": "storage.modifier",
 			"settings": {
-				"foreground": "#{{ dim_1 }}"
+				"fontStyle": "bold italic",
+				"foreground": "#{{ dim_0 }}"
+			}
+		},
+		{
+			"name": "Name of the defined entity",
+			"scope": "entity.name.class",
+			"settings": {
+				"fontStyle": "bold underline",
+				"foreground": "#{{ fg_0 }}"
 			}
 		},
 		{
 			"name": "Name of the defined entity",
 			"scope": "entity.name",
 			"settings": {
-				"fontStyle": "bold underline",
-				"foreground": "#{{ fg_2 }}"
+				"fontStyle": "underline",
+				"foreground": "#{{ fg_1 }}"
 			}
 		},
 		{
 			"scope": "entity.name.function.decorator",
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#{{ dim_1 }}"
+				"foreground": "#{{ fg_0 }}"
 			}
 		},
 		{
@@ -141,23 +162,23 @@
 			"name": "reserved language variables like this, super, self",
 			"scope": "variable.language",
 			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#{{ dim_1 }}"
+				"fontStyle": "bold italic",
+				"foreground": "#{{ dim_0 }}"
 			}
 		},
 		{
 			"name": "stuff from library/framework",
 			"scope": "support",
 			"settings": {
-				"fontStyle": "bold",
-				"foreground": "#{{ dim_1 }}"
+				"fontStyle": "italic",
+				"foreground": "#{{ fg_0 }}"
 			}
 		},
 		{
 			"scope": "support.type.exception",
 			"settings": {
 				"fontStyle": "underline",
-				"foreground": "#{{ fg_2 }}"
+				"foreground": "#{{ fg_0 }}"
 			}
 		},
 		{
@@ -178,7 +199,7 @@
 				"punctuation.accessor"
 			],
 			"settings": {
-				"foreground": "#{{ fg_1 }}"
+				"foreground": "#{{ fg_2 }}"
 			}
 		}
 	]
