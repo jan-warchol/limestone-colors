@@ -9,12 +9,12 @@ Formatting should be either "normal" or a combination of
 
 rules = {
     "comment":         ("dim_0", "italic"),
-    "doc_comment":     ("dim_0", "italic"),
+    "doc_comment":     ("dim_0", "normal"),
 
     "keyword":         ("fg_1",  "bold"),
 
     "constant":        ("fg_0",  "italic"),
-    "number":          ("fg_0",  "normal"),
+    "number":          ("fg_0",  "bold"),
     "string":          ("dim_1", "bold"),
     "str_special":     ("fg_2",  "normal"),
 
@@ -28,6 +28,6 @@ rules = {
 
     "punctuation":     ("fg_2",  "normal"),
 
-    "built_in":        ("fg_0",  "normal"),
+    "built_in":        ("fg_0",  "italic"),
     "exception":       ("fg_2",  "bold"),
 }
