@@ -1,0 +1,27 @@
+{
+    "name": "monochrome-theme",
+    "displayName": "Monochrome color theme",
+    "description": "Syntax highlighting using only shades of grey. It's surprisingly readable!",
+    "version": "0.2.0",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Monochrome grey 60 0.2vs",
+                "uiTheme": "vs-dark",
+                "path": "./themes/monochrome-grey-60-0.2v.json"
+            },
+            {
+                "label": "Monochrome grey 60 0.1vs",
+                "uiTheme": "vs-dark",
+                "path": "./themes/monochrome-grey-60-0.1v.json"
+            }
+        ]
+    }
+}
+
