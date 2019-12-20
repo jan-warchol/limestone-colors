@@ -1,10 +1,31 @@
-"""Generate a theme file from palette and config template."""
+"""Generate a theme file from palette, styling and config template."""
 
 from __future__ import division
 from jinja2 import Template
 from pprint import pprint
 import sys
 import palette_builder as builder
+import token_styling
+
+
+def build_pycharm_snippet(color, style):
+    """Wrap styling information in format appropriate for PyCharm config."""
+    attributes = set(style.split())
+    result = ['<option name="FOREGROUND" value="{}" />'.format(color)]
+
+    if "bold" in attributes and "italic" in attributes:
+        result.append('<option name="FONT_TYPE" value="3" />')
+    elif "bold" in attributes:
+        result.append('<option name="FONT_TYPE" value="1" />')
+    elif "italic" in attributes:
+        result.append('<option name="FONT_TYPE" value="2" />')
+
+    if "underline" in attributes:
+        result.append('<option name="EFFECT_COLOR" value="{}" />'.format(color))
+        result.append('<option name="EFFECT_TYPE" value="1" />')
+
+    return '\n        '.join(result)
+
 
 if len(sys.argv) < 2:
     print("Missing argument: path to the module with palette specification")
@@ -13,8 +34,14 @@ if len(sys.argv) < 2:
 # calculate values for templating from palette
 palette = builder.Palette.load_from_path(sys.argv[1])
 
+pycharm_styling = {
+    token: build_pycharm_snippet(palette.rgb_values()[color_name], style)
+    for token, (color_name, style) in token_styling.rules.items()
+}
+
 values = {"name": palette.name}
 values.update(palette.rgb_values())
+values.update(pycharm_styling)
 
 with open("VERSION", "r") as f:
     values["version"] = f.read().strip()
