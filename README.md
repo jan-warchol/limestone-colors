@@ -31,4 +31,4 @@ Building a palette:
 
 Generating a config file from a template:
 
-    python3 build_theme.py palettes/grey_60.py pycharm.j2
+    python3 build_theme.py -t vscode-template.json.j2 -p palettes/grey_60.py

@@ -3,9 +3,21 @@
 from __future__ import division
 from jinja2 import Template
 from pprint import pprint
+from os import path
 import sys
 import palette_builder as builder
 import token_styling
+import argparse
+import re
+
+
+def calc_output_path(values, input_path):
+    """Build config filename from palette info and template name."""
+    directory = path.dirname(input_path)
+    template_fname = path.basename(input_path).replace(".j2", "")
+    extension = re.sub(re.compile(r'.*template\.'), '', template_fname)
+    filename = values["slug"] + "-" + values["version"] + "." + extension
+    return path.join(directory, filename)
 
 
 def build_pycharm_snippet(color, style):
@@ -27,32 +39,32 @@ def build_pycharm_snippet(color, style):
     return '\n        '.join(result)
 
 
-if len(sys.argv) < 3:
-    print("Usage: build_theme <palette> <template>")
-    sys.exit()
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--palette", "-p", required=True)
+parser.add_argument("--template", "-t", required=True)
+args = parser.parse_args()
 
-# calculate values for templating from palette
-palette = builder.Palette.load_from_path(sys.argv[1])
+palette = builder.Palette.load_from_path(args.palette)
 
 pycharm_styling = {
     token: build_pycharm_snippet(palette.rgb_values()[color_name], style)
     for token, (color_name, style) in token_styling.rules.items()
 }
 
-values = {"name": palette.name}
+values = {
+    "name": palette.name,
+    "slug": palette.slug,
+}
 values.update(palette.rgb_values())
 values.update(pycharm_styling)
 
 with open("VERSION", "r") as f:
     values["version"] = f.read().strip()
 
-with open(sys.argv[2], "r") as f:
+with open(args.template, "r") as f:
     template = Template(f.read())
 
-output_path = sys.argv[2].replace(
-    ".j2",
-    "-{}-{}.icls".format(palette.slug, values["version"])
-)
+output_path = calc_output_path(values, args.template)
 with open(output_path, "w") as f:
     f.write(template.render(**values))
     print("Output written to {}".format(output_path))
