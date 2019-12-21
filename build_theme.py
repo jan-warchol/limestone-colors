@@ -39,27 +39,34 @@ def build_pycharm_snippet(color, style):
     return '\n        '.join(result)
 
 
+def build_templating_values(palette, styling_rules):
+    """Create a dict with all attributes that can be used in a template."""
+    mapping = {
+        "name": palette.name,
+        "slug": palette.slug,
+    }
+    with open("VERSION", "r") as f:
+        mapping["version"] = f.read().strip()
+
+    for token, (color_name, style) in styling_rules.items():
+        rgb_color = palette.rgb_values()[color_name]
+        mapping[token] = {
+            "color": rgb_color,
+            "style": style,
+            "pycharm": build_pycharm_snippet(rgb_color, style)
+        }
+    mapping.update(palette.rgb_values())
+
+    return mapping
+
+
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--palette", "-p", required=True)
 parser.add_argument("--template", "-t", required=True)
 args = parser.parse_args()
 
 palette = builder.Palette.load_from_path(args.palette)
-
-pycharm_styling = {
-    token: build_pycharm_snippet(palette.rgb_values()[color_name], style)
-    for token, (color_name, style) in token_styling.rules.items()
-}
-
-values = {
-    "name": palette.name,
-    "slug": palette.slug,
-}
-values.update(palette.rgb_values())
-values.update(pycharm_styling)
-
-with open("VERSION", "r") as f:
-    values["version"] = f.read().strip()
+values = build_templating_values(palette, token_styling.rules)
 
 with open(args.template, "r") as f:
     template = Template(f.read())
