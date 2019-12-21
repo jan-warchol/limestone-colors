@@ -10,6 +10,7 @@ Formatting should be either "normal" or a combination of
 rules = {
     "comment":         ("dim_0", "italic"),
     "doc_comment":     ("dim_0", "normal"),
+    "doc_special":     ("dim_1", "bold italic"),
 
     "keyword":         ("fg_1",  "bold"),
 
@@ -20,6 +21,7 @@ rules = {
 
     "class_def":       ("fg_1",  "underline"),
     "function_def":    ("fg_1",  "underline"),
+    "function_call":   ("fg_0",  "normal"),
     "variable":        ("fg_0",  "normal"),
 
     "type":            ("dim_1", "bold italic"),
@@ -28,6 +30,7 @@ rules = {
 
     "punctuation":     ("fg_2",  "normal"),
 
+    "keyword_arg":     ("dim_3", "italic"),
     "built_in":        ("fg_0",  "italic"),
     "exception":       ("fg_2",  "bold"),
 }

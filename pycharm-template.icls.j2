@@ -52,24 +52,27 @@
     </option>
     <option name="DEFAULT_DOC_COMMENT_TAG">
       <value>
-        <option name="EFFECT_COLOR" value="{{ dim_0 }}" />
-        <option name="EFFECT_TYPE" value="1" />
+        {{ doc_special.pycharm }}
       </value>
     </option>
     <option name="DEFAULT_DOC_COMMENT_TAG_VALUE">
       <value>
-        <option name="FOREGROUND" value="{{ dim_1 }}" />
+        {{ doc_special.pycharm }}
       </value>
     </option>
     <option name="DEFAULT_DOC_MARKUP">
       <value>
-        <option name="FOREGROUND" value="{{ dim_1 }}" />
-        <option name="FONT_TYPE" value="1" />
+        {{ doc_special.pycharm }}
       </value>
     </option>
     <option name="DEFAULT_DOT">
       <value>
         {{ punctuation.pycharm }}
+      </value>
+    </option>
+    <option name="DEFAULT_FUNCTION_CALL">
+      <value>
+        {{ function_call.pycharm }}
       </value>
     </option>
     <option name="DEFAULT_FUNCTION_DECLARATION">
@@ -79,6 +82,9 @@
     </option>
     <option name="DEFAULT_IDENTIFIER" baseAttributes="TEXT" />
     <option name="DEFAULT_INSTANCE_FIELD">
+      <value />
+    </option>
+    <option name="DEFAULT_INSTANCE_METHOD">
       <value />
     </option>
     <option name="DEFAULT_KEYWORD">
@@ -116,6 +122,12 @@
         {{ punctuation.pycharm }}
       </value>
     </option>
+    <option name="DEFAULT_STATIC_FIELD">
+      <value />
+    </option>
+    <option name="DEFAULT_STATIC_METHOD">
+      <value />
+    </option>
     <option name="DEFAULT_STRING">
       <value>
         {{ string.pycharm }}
@@ -126,6 +138,11 @@
         {{ str_special.pycharm }}
       </value>
     </option>
+    <option name="PY.ANNOTATION">
+      <value>
+        {{ type.pycharm }}
+      </value>
+    </option>
     <option name="PY.BUILTIN_NAME" baseAttributes="DEFAULT_PREDEFINED_SYMBOL" />
     <option name="PY.DECORATOR">
       <value>
@@ -133,7 +150,11 @@
       </value>
     </option>
     <option name="PY.KEYWORD" baseAttributes="DEFAULT_KEYWORD" />
-    <option name="PY.KEYWORD_ARGUMENT" baseAttributes="DEFAULT_PARAMETER" />
+    <option name="PY.KEYWORD_ARGUMENT">
+      <value>
+        {{ keyword_arg.pycharm }}
+      </value>
+    </option>
     <option name="PY.PREDEFINED_DEFINITION" baseAttributes="DEFAULT_PREDEFINED_SYMBOL" />
     <option name="PY.PREDEFINED_USAGE" baseAttributes="DEFAULT_PREDEFINED_SYMBOL" />
     <option name="PY.SELF_PARAMETER">
