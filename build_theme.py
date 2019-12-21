@@ -27,8 +27,8 @@ def build_pycharm_snippet(color, style):
     return '\n        '.join(result)
 
 
-if len(sys.argv) < 2:
-    print("Missing argument: path to the module with palette specification")
+if len(sys.argv) < 3:
+    print("Usage: build_theme <palette> <template>")
     sys.exit()
 
 # calculate values for templating from palette
@@ -46,11 +46,13 @@ values.update(pycharm_styling)
 with open("VERSION", "r") as f:
     values["version"] = f.read().strip()
 
-# run templating
-with open("pycharm.j2", "r") as f:
+with open(sys.argv[2], "r") as f:
     template = Template(f.read())
 
-output_path = "{}-{}.icls".format(palette.slug, values["version"])
+output_path = sys.argv[2].replace(
+    ".j2",
+    "-{}-{}.icls".format(palette.slug, values["version"])
+)
 with open(output_path, "w") as f:
     f.write(template.render(**values))
     print("Output written to {}".format(output_path))

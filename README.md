@@ -27,8 +27,8 @@ First install dependencies:
 
 Building a palette:
 
-    python3 palette_builder.py palette_spec.py
+    python3 palette_builder.py palettes/grey_60.py
 
 Generating a config file from a template:
 
-    python3 build_theme.py palette_spec.py
+    python3 build_theme.py palettes/grey_60.py pycharm.j2

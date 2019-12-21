@@ -1,10 +1,6 @@
 from __future__ import division
 
-# Variant based on fg and bg of default dark theme for JetBrains IDEs
-name = "Darkula-based mono"
-background = (18, 0, 0)  # UI background is actually a bit bluish (26, -1, -2)
-foreground = (74, -3, -9)
-shades = {
+shades_lightness = {
     "bg_1":  1/10,
     "bg_2":  1/6,
     "bg_3":  1/4,
