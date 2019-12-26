@@ -19,7 +19,7 @@ rules = {
     "string":          ("dim_1", "bold"),
     "str_special":     ("fg_2",  "normal"),
 
-    "class_def":       ("fg_1",  "underline"),
+    "class_def":       ("fg_1",  "bold underline"),
     "function_def":    ("fg_1",  "underline"),
     "function_call":   ("fg_0",  "normal"),
     "variable":        ("fg_0",  "normal"),
