@@ -39,6 +39,15 @@ def build_pycharm_snippet(color, style):
     return '\n        '.join(result)
 
 
+def build_vscode_snippet(color, style):
+    """Wrap styling information in format appropriate for VScode config."""
+    result = [
+        '"fontStyle": "{}",'.format(style),
+        '"foreground": "#{}"'.format(color)
+    ]
+    return '\n				'.join(result)
+
+
 def build_templating_values(palette, styling_rules):
     """Create a dict with all attributes that can be used in a template."""
     mapping = {
@@ -53,7 +62,8 @@ def build_templating_values(palette, styling_rules):
         mapping[token] = {
             "color": rgb_color,
             "style": style,
-            "pycharm": build_pycharm_snippet(rgb_color, style)
+            "pycharm": build_pycharm_snippet(rgb_color, style),
+            "vscode": build_vscode_snippet(rgb_color, style),
         }
     mapping.update(palette.rgb_values())
 

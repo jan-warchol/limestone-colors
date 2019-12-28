@@ -16,10 +16,15 @@
 	},
 	"tokenColors": [
 		{
+			"scope": "meta.function-call",
+			"settings": {
+				{{ function_call.vscode }}
+			}
+		},
+		{
 			"scope": "comment",
 			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#{{ dim_0 }}"
+				{{ comment.vscode }}
 			}
 		},
 		{
@@ -30,8 +35,7 @@
 				"storage.type.class"
 			],
 			"settings": {
-				"fontStyle": "bold",
-				"foreground": "#{{ fg_1 }}"
+				{{ keyword.vscode }}
 			}
 		},
 		{
@@ -48,15 +52,13 @@
 				"keyword.other.import"
 			],
 			"settings": {
-				"fontStyle": "bold",
-				"foreground": "#{{ fg_1 }}"
+				{{ keyword.vscode }}
 			}
 		},
 		{
 			"scope": "string",
 			"settings": {
-				"fontStyle": "bold",
-				"foreground": "#{{ dim_0 }}"
+				{{ string.vscode }}
 			}
 		},
 		{
@@ -66,8 +68,7 @@
 				"string.quoted.docstring.multi"
 			],
 			"settings": {
-				"fontStyle": "bold italic",
-				"foreground": "#{{ dim_0 }}"
+				{{ doc_comment.vscode }}
 			}
 		},
 		{
@@ -80,8 +81,7 @@
 		{
 			"scope": "constant.numeric",
 			"settings": {
-				"fontStyle": "normal",
-				"foreground": "#{{ fg_0 }}"
+				{{ number.vscode }}
 			}
 		},
 		{
@@ -103,15 +103,13 @@
 				"storage.type.string"
 			],
 			"settings": {
-				"fontStyle": "normal",
-				"foreground": "#{{ fg_1 }}"
+				{{ str_special.vscode }}
 			}
 		},
 		{
 			"scope": "storage",
 			"settings": {
-				"fontStyle": "bold italic",
-				"foreground": "#{{ dim_0 }}"
+				{{ type.vscode }}
 			}
 		},
 		{
@@ -126,23 +124,20 @@
 			"name": "Name of the defined entity",
 			"scope": "entity.name.class",
 			"settings": {
-				"fontStyle": "bold underline",
-				"foreground": "#{{ fg_0 }}"
+				{{ class_def.vscode }}
 			}
 		},
 		{
 			"name": "Name of the defined entity",
 			"scope": "entity.name",
 			"settings": {
-				"fontStyle": "underline",
-				"foreground": "#{{ fg_1 }}"
+				{{ function_def.vscode }}
 			}
 		},
 		{
 			"scope": "entity.name.function.decorator",
 			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#{{ fg_0 }}"
+				{{ annotation.vscode }}
 			}
 		},
 		{
@@ -162,23 +157,20 @@
 			"name": "reserved language variables like this, super, self",
 			"scope": "variable.language",
 			"settings": {
-				"fontStyle": "bold italic",
-				"foreground": "#{{ dim_0 }}"
+				{{ special_var.vscode }}
 			}
 		},
 		{
 			"name": "stuff from library/framework",
 			"scope": "support",
 			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#{{ fg_0 }}"
+				{{ built_in.vscode }}
 			}
 		},
 		{
 			"scope": "support.type.exception",
 			"settings": {
-				"fontStyle": "underline",
-				"foreground": "#{{ fg_0 }}"
+				{{ exception.vscode }}
 			}
 		},
 		{
@@ -199,7 +191,7 @@
 				"punctuation.accessor"
 			],
 			"settings": {
-				"foreground": "#{{ fg_2 }}"
+				{{ punctuation.vscode }}
 			}
 		}
 	]
