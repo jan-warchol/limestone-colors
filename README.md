@@ -18,6 +18,16 @@ Features
   and generate all other shades from that
 
 
+Theme installation
+------------------
+
+Instructions are in the directory corresponding to the particular editor, for
+example:
+
+- [Visual Studio Code](vscode/)
+- [PyCharm](pycharm/)
+
+
 Theme builder usage
 -------------------
 
