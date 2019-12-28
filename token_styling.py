@@ -16,26 +16,26 @@ rules = {
     # literals and constants
     "string":          ("dim_1", "bold"),
     "str_special":     ("fg_2",  "normal"),
-    "number":          ("fg_0",  "bold"),
+    "number":          ("fg_2",  "normal"),
     "constant":        ("fg_0",  "italic"),
 
     # language reserved words
     "keyword":         ("fg_1",  "bold"),
 
     # "meta" tokens that supplement other elements
-    "type":            ("dim_1", "bold italic"),
+    "type":            ("dim_2", "italic"),
     "keyword_arg":     ("dim_3", "italic"),
     "special_var":     ("dim_1", "bold italic"),
 
     # elements that are usually predefined
-    "built_in":        ("fg_0",  "italic"),
+    "built_in":        ("dim_3", "italic"),
     "exception":       ("fg_2",  "bold"),
-    "decorator":       ("fg_0",  "italic"),
+    "decorator":       ("dim_3", "italic"),
 
     # elements that are usually user-defined
-    "class_def":       ("fg_1",  "bold underline"),
-    "function_def":    ("fg_1",  "underline"),
-    "function_call":   ("fg_0",  "normal"),
+    "class_def":       ("fg_2",  "bold underline"),
+    "function_def":    ("fg_2",  "underline"),
+    "function_call":   ("dim_3", "bold"),
     "variable":        ("fg_0",  "normal"),
 
     # other
