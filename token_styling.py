@@ -8,29 +8,36 @@ Formatting should be either "normal" or a combination of
 (order doesn't matter)."""
 
 rules = {
+    # non-code (information and metadata)
     "comment":         ("dim_0", "italic"),
     "doc_comment":     ("dim_0", "normal"),
     "doc_special":     ("dim_1", "bold italic"),
 
-    "keyword":         ("fg_1",  "bold"),
-
-    "constant":        ("fg_0",  "italic"),
-    "number":          ("fg_0",  "bold"),
+    # literals and constants
     "string":          ("dim_1", "bold"),
     "str_special":     ("fg_2",  "normal"),
+    "number":          ("fg_0",  "bold"),
+    "constant":        ("fg_0",  "italic"),
 
+    # language reserved words
+    "keyword":         ("fg_1",  "bold"),
+
+    # "meta" tokens that supplement other elements
+    "type":            ("dim_1", "bold italic"),
+    "keyword_arg":     ("dim_3", "italic"),
+    "special_var":     ("dim_1", "bold italic"),
+
+    # elements that are usually predefined
+    "built_in":        ("fg_0",  "italic"),
+    "exception":       ("fg_2",  "bold"),
+    "decorator":       ("fg_0",  "italic"),
+
+    # elements that are usually user-defined
     "class_def":       ("fg_1",  "bold underline"),
     "function_def":    ("fg_1",  "underline"),
     "function_call":   ("fg_0",  "normal"),
     "variable":        ("fg_0",  "normal"),
 
-    "type":            ("dim_1", "bold italic"),
-    "special_var":     ("dim_1", "bold italic"),
-    "annotation":      ("fg_0",  "italic"),
-
+    # other
     "punctuation":     ("fg_2",  "normal"),
-
-    "keyword_arg":     ("dim_3", "italic"),
-    "built_in":        ("fg_0",  "italic"),
-    "exception":       ("fg_2",  "bold"),
 }

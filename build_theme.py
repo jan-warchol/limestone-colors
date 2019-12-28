@@ -65,10 +65,14 @@ def build_templating_values(palette, styling_rules):
             "pycharm": build_pycharm_snippet(rgb_color, style),
             "vscode": build_vscode_snippet(rgb_color, style),
         }
+
+    # we want to use color names directly e.g. for editor-specific settings
     mapping.update(palette.rgb_values())
 
     return mapping
 
+
+# Parse options and run templating.
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--palette", "-p", required=True)

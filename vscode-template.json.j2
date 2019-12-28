@@ -16,43 +16,9 @@
 	},
 	"tokenColors": [
 		{
-			"scope": "meta.function-call",
-			"settings": {
-				{{ function_call.vscode }}
-			}
-		},
-		{
 			"scope": "comment",
 			"settings": {
 				{{ comment.vscode }}
-			}
-		},
-		{
-			"name": "keywords (including function and class defs)",
-			"scope": [
-				"keyword.control",
-				"storage.type.function",
-				"storage.type.class"
-			],
-			"settings": {
-				{{ keyword.vscode }}
-			}
-		},
-		{
-			"scope": "keyword.operator",
-			"settings": {
-				"fontStyle": "bold",
-				"foreground": "#{{ fg_0 }}"
-			}
-		},
-		{
-			"name": "imports",
-			"scope": [
-				"keyword.control.import",
-				"keyword.other.import"
-			],
-			"settings": {
-				{{ keyword.vscode }}
 			}
 		},
 		{
@@ -69,6 +35,21 @@
 			],
 			"settings": {
 				{{ doc_comment.vscode }}
+			}
+		},
+		{
+			"name": "string interpolation",
+			"scope": [
+				"string.constant.character.escape",
+				"constant.character.format",
+				"constant.character.escape",
+				"punctuation.section.embedded",
+				"punctuation.definition.template-expression.begin",
+				"punctuation.definition.template-expression.end",
+				"storage.type.string"
+			],
+			"settings": {
+				{{ str_special.vscode }}
 			}
 		},
 		{
@@ -92,18 +73,31 @@
 			}
 		},
 		{
-			"name": "string interpolation",
+			"name": "keywords (including function and class defs)",
 			"scope": [
-				"string.constant.character.escape",
-				"constant.character.format",
-				"constant.character.escape",
-				"punctuation.section.embedded",
-				"punctuation.definition.template-expression.begin",
-				"punctuation.definition.template-expression.end",
-				"storage.type.string"
+				"keyword.control",
+				"storage.type.function",
+				"storage.type.class"
 			],
 			"settings": {
-				{{ str_special.vscode }}
+				{{ keyword.vscode }}
+			}
+		},
+		{
+			"name": "imports",
+			"scope": [
+				"keyword.control.import",
+				"keyword.other.import"
+			],
+			"settings": {
+				{{ keyword.vscode }}
+			}
+		},
+		{
+			"scope": "keyword.operator",
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#{{ fg_0 }}"
 			}
 		},
 		{
@@ -118,39 +112,6 @@
 			"settings": {
 				"fontStyle": "bold italic",
 				"foreground": "#{{ dim_0 }}"
-			}
-		},
-		{
-			"name": "Name of the defined entity",
-			"scope": "entity.name.class",
-			"settings": {
-				{{ class_def.vscode }}
-			}
-		},
-		{
-			"name": "Name of the defined entity",
-			"scope": "entity.name",
-			"settings": {
-				{{ function_def.vscode }}
-			}
-		},
-		{
-			"scope": "entity.name.function.decorator",
-			"settings": {
-				{{ annotation.vscode }}
-			}
-		},
-		{
-			"scope": "variable",
-			"settings": {
-				"foreground": "#{{ fg_0 }}"
-			}
-		},
-		{
-			"name": "Almost every variable in JS is in this scope",
-			"scope": "variable.other",
-			"settings": {
-				"foreground": "#{{ fg_0 }}"
 			}
 		},
 		{
@@ -171,6 +132,45 @@
 			"scope": "support.type.exception",
 			"settings": {
 				{{ exception.vscode }}
+			}
+		},
+		{
+			"scope": "entity.name.function.decorator",
+			"settings": {
+				{{ decorator.vscode }}
+			}
+		},
+		{
+			"name": "Name of the defined class",
+			"scope": "entity.name.class",
+			"settings": {
+				{{ class_def.vscode }}
+			}
+		},
+		{
+			"name": "Name of the defined entity",
+			"scope": "entity.name",
+			"settings": {
+				{{ function_def.vscode }}
+			}
+		},
+		{
+			"scope": "meta.function-call",
+			"settings": {
+				{{ function_call.vscode }}
+			}
+		},
+		{
+			"scope": "variable",
+			"settings": {
+				"foreground": "#{{ fg_0 }}"
+			}
+		},
+		{
+			"name": "Almost every variable in JS is in this scope",
+			"scope": "variable.other",
+			"settings": {
+				"foreground": "#{{ fg_0 }}"
 			}
 		},
 		{
