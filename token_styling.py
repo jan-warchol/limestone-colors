@@ -17,10 +17,13 @@ rules = {
     "string":          ("dim_1", "bold"),
     "str_special":     ("fg_2",  "normal"),
     "number":          ("fg_0",  "bold"),
+    "boolean":         ("fg_0",  "italic"),
     "constant":        ("fg_0",  "italic"),
 
     # language reserved words
     "keyword":         ("fg_1",  "bold"),
+    "import":          ("fg_1",  "bold"),
+    "operator":        ("fg_0",  "normal"),
 
     # "meta" tokens that supplement other elements
     "type":            ("dim_1", "bold italic"),
@@ -36,6 +39,8 @@ rules = {
     "class_def":       ("fg_1",  "bold underline"),
     "function_def":    ("fg_1",  "underline"),
     "function_call":   ("fg_0",  "normal"),
+    # some grammars use one scope for function definitions and calls
+    "function":        ("fg_1",  "normal"),
     "parameter":       ("fg_0",  "normal"),
 
     # other

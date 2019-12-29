@@ -28,11 +28,7 @@
 			}
 		},
 		{
-			"name": "docstrings and other multiline strings",
-			"scope": [
-				"string.unquoted",
-				"string.quoted.docstring.multi"
-			],
+			"scope": "string.quoted.docstring",
 			"settings": {
 				{{ doc_comment.vscode }}
 			}
@@ -45,15 +41,14 @@
 			}
 		},
 		{
-			"name": "string interpolation",
+			"name": "string interpolation and escaping",
 			"scope": [
 				"string.constant.character.escape",
 				"constant.character.format",
 				"constant.character.escape",
 				"punctuation.section.embedded",
 				"punctuation.definition.template-expression.begin",
-				"punctuation.definition.template-expression.end",
-				"storage.type.string"
+				"punctuation.definition.template-expression.end"
 			],
 			"settings": {
 				{{ str_special.vscode }}
@@ -62,8 +57,7 @@
 		{
 			"scope": "constant",
 			"settings": {
-				"fontStyle": "normal",
-				"foreground": "#{{ fg_0 }}"
+				{{ constant.vscode }}
 			}
 		},
 		{
@@ -75,8 +69,7 @@
 		{
 			"scope": "constant.language",
 			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#{{ fg_0 }}"
+				{{ boolean.vscode }}
 			}
 		},
 		{
@@ -97,14 +90,13 @@
 				"keyword.other.import"
 			],
 			"settings": {
-				{{ keyword.vscode }}
+				{{ import.vscode }}
 			}
 		},
 		{
 			"scope": "keyword.operator",
 			"settings": {
-				"fontStyle": "bold",
-				"foreground": "#{{ fg_0 }}"
+				{{ operator.vscode }}
 			}
 		},
 		{
@@ -115,11 +107,10 @@
 			}
 		},
 		{
-			"name": "const, final, abstract etc.",
-			"scope": "storage.modifier",
+			"name": "keyword argument name in function call",
+			"scope": "variable.parameter.function-call",
 			"settings": {
-				"fontStyle": "bold italic",
-				"foreground": "#{{ dim_0 }}"
+				{{ keyword_arg.vscode }}
 			}
 		},
 		{
@@ -159,16 +150,27 @@
 			}
 		},
 		{
-			"name": "Name of the defined entity",
-			"scope": "entity.name",
+			"name": "Name of the defined function",
+			"scope": [
+				"entity.name.function",
+				"entity.name.function.declaration"
+			],
 			"settings": {
 				{{ function_def.vscode }}
 			}
 		},
 		{
-			"scope": "meta.function-call",
+			"name": "function calls (works only for some languages)",
+			"scope": "meta.function-call.generic",
 			"settings": {
 				{{ function_call.vscode }}
+			}
+		},
+		{
+			"name": "function calls and defs use the same scope in JS",
+			"scope": "entity.name.function.js",
+			"settings": {
+				{{ function.vscode }}
 			}
 		},
 		{
@@ -182,13 +184,6 @@
 			"scope": "variable.parameter",
 			"settings": {
 				{{ parameter.vscode }}
-			}
-		},
-		{
-			"name": "Almost every variable in JS is in this scope",
-			"scope": "variable.other",
-			"settings": {
-				"foreground": "#{{ fg_0 }}"
 			}
 		},
 		{
