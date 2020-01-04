@@ -9,12 +9,15 @@ for things like Markdown or XML.
 Installation
 ------------
 
-You need to put content of this directory in a subdir of `.vscode/extensions`.
-The easiest way to do it is to clone the repo and setup a symlink like this
-(tested on Linux):
+1.  Put content of this directory (including `package.json`) in a subdir of
+    `$HOME/.vscode/extensions`.  The easiest way to do it is to clone the repo
+    and setup a symlink like this (tested on Linux):
 
-    git clone https://github.com/jan-warchol/monochrome-syntax --branch devel
-    ln -s $HOME/.vscode/extensions/mono-theme $PWD/monochrome-syntax/vscode
+        git clone https://github.com/jan-warchol/monochrome-syntax --branch devel
+        ln -s $PWD/monochrome-syntax/vscode $HOME/.vscode/extensions/mono-theme
 
-After that, reload window (Ctrl+Shift+P => search for "reload") or just restart
-VScode.
+1.  reload the window (`Ctrl+Shift+P` => search for `reload`; sometimes it's
+    necessary to reload the window twice) or just restart VScode.
+
+1.  Open `Color Theme` picker from preferences (shortcut: `Ctrl+K Ctrl+T`) and
+    search for `Monochrome`.
