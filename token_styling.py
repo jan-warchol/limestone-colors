@@ -36,7 +36,7 @@ rules = {
     "class_def":       ("fg_1",  "bold underline"),
     "function_def":    ("fg_1",  "underline"),
     "function_call":   ("fg_0",  "normal"),
-    "variable":        ("fg_0",  "normal"),
+    "parameter":       ("fg_0",  "normal"),
 
     # other
     "punctuation":     ("fg_2",  "normal"),

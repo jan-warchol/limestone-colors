@@ -7,12 +7,12 @@
 		"editorCursor.foreground":             "#{{ fg_0 }}",
 		"editorLineNumber.foreground":         "#{{ dim_0 }}",
 		"editorLineNumber.activeForeground":   "#{{ fg_0 }}",
-		"editorIndentGuide.background":        "#{{ bg_2 }}",
+		"editorIndentGuide.background":        "#{{ bg_3 }}",
 		"editorIndentGuide.activeBackground":  "#{{ dim_0 }}",
-		"editor.selectionBackground":          "#{{ bg_2 }}",
+		"editor.selectionBackground":          "#{{ bg_3 }}",
 		"editor.inactiveSelectionBackground":  "#{{ bg_1 }}",
 		"editor.selectionHighlightBackground": "#{{ bg_0 }}",
-		"editor.selectionHighlightBorder":     "#{{ bg_2 }}"
+		"editor.selectionHighlightBorder":     "#{{ bg_3 }}"
 	},
 	"tokenColors": [
 		{
@@ -35,6 +35,13 @@
 			],
 			"settings": {
 				{{ doc_comment.vscode }}
+			}
+		},
+		{
+			"name": "special elements in doc comments",
+			"scope": "storage.type.class.jsdoc",
+			"settings": {
+				{{ doc_special.vscode }}
 			}
 		},
 		{
@@ -101,6 +108,7 @@
 			}
 		},
 		{
+			"name": "types and type modifiers",
 			"scope": "storage",
 			"settings": {
 				{{ type.vscode }}
@@ -115,14 +123,14 @@
 			}
 		},
 		{
-			"name": "reserved language variables like this, super, self",
+			"name": "reserved variables like this, super, self",
 			"scope": "variable.language",
 			"settings": {
 				{{ special_var.vscode }}
 			}
 		},
 		{
-			"name": "stuff from library/framework",
+			"name": "built-ins, things from library/framework",
 			"scope": "support",
 			"settings": {
 				{{ built_in.vscode }}
@@ -142,7 +150,10 @@
 		},
 		{
 			"name": "Name of the defined class",
-			"scope": "entity.name.class",
+			"scope": [
+				"entity.name.class",
+				"entity.name.type.class"
+			],
 			"settings": {
 				{{ class_def.vscode }}
 			}
@@ -161,9 +172,16 @@
 			}
 		},
 		{
+			"name": "ordinary variables (should by default use basic styling)",
 			"scope": "variable",
 			"settings": {
 				"foreground": "#{{ fg_0 }}"
+			}
+		},
+		{
+			"scope": "variable.parameter",
+			"settings": {
+				{{ parameter.vscode }}
 			}
 		},
 		{
