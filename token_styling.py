@@ -11,12 +11,12 @@ rules = {
     # non-code (information and metadata)
     "comment":         ("dim_0", "italic"),
     "doc_comment":     ("dim_0", "normal"),
-    "doc_special":     ("dim_1", "bold italic"),
+    "doc_special":     ("dim_1", "bold"),
 
     # literals and constants
     "string":          ("dim_1", "bold"),
     "str_special":     ("fg_2",  "normal"),
-    "number":          ("fg_0",  "bold"),
+    "number":          ("fg_0",  "normal"),
     "boolean":         ("fg_0",  "italic"),
     "constant":        ("fg_0",  "italic"),
 
@@ -33,14 +33,14 @@ rules = {
     # elements that are usually predefined
     "built_in":        ("fg_0",  "italic"),
     "exception":       ("fg_2",  "bold"),
-    "decorator":       ("fg_0",  "italic"),
+    "decorator":       ("dim_3", "bold italic"),
 
     # elements that are usually user-defined
     "class_def":       ("fg_1",  "bold underline"),
     "function_def":    ("fg_1",  "underline"),
     "function_call":   ("fg_0",  "normal"),
     # some grammars use one scope for function definitions and calls
-    "function":        ("fg_1",  "normal"),
+    "function":        ("fg_0",  "normal"),
     "parameter":       ("fg_0",  "normal"),
 
     # other
