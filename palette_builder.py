@@ -5,38 +5,59 @@ from colormath.color_conversions import convert_color
 
 
 class Palette(object):
-    """Build a color palette from background, foreground and lightness data.
+    """Build a palette from bg, fg, lightness data and optional accent colors.
 
     Background and foreground should be coordinates in CIE Lab color space.
     The restult is a mapping of color names to tuples with their CIE Lab
-    coordinates, stored in color_coords attribute.
+    and sRGB coordinates.
 
-    Naming conventions for colors:
+    Important attributes:
+    base_shades: colors derived from background and foreground (in CIE Lab).
+    accent_colors: "special" colors like "blue", with variants (in CIE Lab).
+
+    Important methods:
+    rgb_values(): returns a dict mapping color names to hex sRGB coords.
+
+    Naming conventions for base_shades:
     `bg_*` - shades used for background (e.g. cursor line or selection)
     `fg_*` - foreground and bright foreground
     `dim_*` - secondary shades (between bg and fg)
     """
+
     def __init__(self, name, background, foreground, shade_specs):
+        """Initialize with base shades. Accent colors may remain empty."""
         self.name = name
         self.slug = slugify(name)
         self.bg = LabColor(*background)
         self.fg = LabColor(*foreground)
         self.contrast = self.fg.lab_l - self.bg.lab_l
 
-        self.color_coords = {}
-        self.color_coords["fg_0"] = foreground
-        self.color_coords["bg_0"] = background
+        self.base_shades = {}
+        self.accent_colors = {}
 
         self.build_shades(shade_specs)
 
     @classmethod
     def load_from_module(cls, module_name):
+        """Init from module containig specs, with accent colors if present."""
         import importlib
         config = importlib.import_module(module_name)
-        return cls(config.name,
-                   config.background,
-                   config.foreground,
-                   config.shades)
+
+        result = cls(config.name,
+                     config.background,
+                     config.foreground,
+                     config.shades)
+        print("Generated {} base shades.".format(len(config.shades)))
+
+        try:
+            result.build_variants(config.colors, config.color_variants)
+            print("Generated {} accent colors with {} variant(s) each.".format(
+                len(config.colors),
+                len(config.color_variants) + 1))
+        except AttributeError:
+            print("No information about accent colors, skipping.")
+
+        return result
 
     @classmethod
     def load_from_path(cls, path):
@@ -50,15 +71,29 @@ class Palette(object):
         module_name = file_name.replace(".py", "")
         return cls.load_from_module(module_name)
 
+    def build_variants(self, colors, variant_specs):
+        """Add accent colors + variants with different lightness/saturation."""
+        for name, coords in colors.items():
+            self.accent_colors[name] = coords
+            orig_l, orig_a, orig_b = coords
+            for suffix, (lightness_factor, saturation) in variant_specs.items():
+                a = orig_a * saturation
+                b = orig_b * saturation
+                # Accents may have different lightness than foreground. Adjust
+                # lightness of desaturated variants to ensure smooth transition.
+                adjusted = orig_l * saturation + self.fg.lab_l * (1-saturation)
+                l = min(adjusted * lightness_factor, 100)
+                self.accent_colors[name + "_" + suffix] = (l, a, b)
+
     def build_shades(self, shade_specs):
-        """Calculate supplemental shades according to their naming."""
+        """Add supplemental base colors calculated according to their naming."""
         for name, lightness in shade_specs.items():
             if name.startswith("bg"):
-                self.color_coords[name] = self.background_shade(lightness)
+                self.base_shades[name] = self.background_shade(lightness)
             elif name.startswith("fg"):
-                self.color_coords[name] = self.foreground_shade(lightness)
+                self.base_shades[name] = self.foreground_shade(lightness)
             else:
-                self.color_coords[name] = self.secondary_shade(lightness)
+                self.base_shades[name] = self.secondary_shade(lightness)
 
     def secondary_shade(self, relative_lightness):
         """Calculate a color that is a weighted average of bg and fg."""
@@ -75,13 +110,21 @@ class Palette(object):
         return (min(lightness, 100), self.fg.lab_a, self.fg.lab_b)
 
     def background_shade(self, relative_lightness):
+        """Calculate a color derived from background."""
         lightness = self.bg.lab_l + relative_lightness * self.contrast
         return (lightness, self.bg.lab_a, self.bg.lab_b)
 
+    def all_colors(self):
+        result = {}
+        result.update(self.base_shades)
+        result.update(self.accent_colors)
+        return result
+
     def lab_colors(self):
+        """Return a dictionary of Lab color objects (not just coordinates)."""
         return {
             name: LabColor(*coords, illuminant='d50')
-            for name, coords in self.color_coords.items()
+            for name, coords in self.all_colors().items()
         }
 
     def rgb_values(self):
