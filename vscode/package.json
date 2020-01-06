@@ -12,6 +12,11 @@
     "contributes": {
         "themes": [
             {
+                "label": "Monochrome grey 60 0.5",
+                "uiTheme": "vs-dark",
+                "path": "./themes/monochrome-grey-60-0.5.json"
+            },
+            {
                 "label": "Monochrome grey 60 0.4",
                 "uiTheme": "vs-dark",
                 "path": "./themes/monochrome-grey-60-0.4.json"
