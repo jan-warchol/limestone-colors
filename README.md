@@ -35,10 +35,29 @@ First install dependencies:
 
     pip3 install --user -r requirements.txt
 
-Building a palette:
+Build a palette and output its colors:
 
     python3 palette_builder.py palettes/grey_60.py
 
-Generating a config file from a template:
+Generate a config file from a palette and template:
 
-    python3 build_theme.py -t vscode-template.json.j2 -p palettes/grey_60.py
+    python3 build_theme.py --palette palettes/grey_60.py --template vscode-template.json.j2
+
+
+Development & contributing
+--------------------------
+
+_Note: `devel` branch is frequently rebased!_
+
+You're welcome to contribute improvements to the themes. Please just make sure
+to only use the colors from the corresponding palette (see above), and avoid
+any non-standard formatting styles (bold, italic and underline are fine).
+
+Roadmap for the next few weeks:
+
+1. Settle on styling of basic token types.
+1. Design a slightly less minimalistic theme using shades of two colors (apart
+   from shades of grey)
+1. Use the above to create colorschemes for people with various kinds of color
+   blindness.
+1. Add support for Vim.
