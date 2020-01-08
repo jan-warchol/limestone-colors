@@ -1,9 +1,12 @@
 Minimalistic syntax highlighting
 --------------------------------
 
-This is an attempt to design a syntax highlighting theme that uses only shades
-of one or two colors, but still maintains high readability. It's currently in
-early phase of development, no stable version has been released yet. **See
+Project goal is to design syntax highlighting with **high readability** (making
+important information easy to see, and putting boilerplate in the background)
+using a limited set of colors (so that the result doesn't jump on you).
+
+It's currently in early phase of development, no stable version has been
+released yet. **See
 [`devel`](https://github.com/jan-warchol/monochrome-syntax/tree/devel) branch
 for current state of work.**
 
@@ -11,11 +14,14 @@ for current state of work.**
 Features
 --------
 
-- moderate contrast: very readable but not tiring to the eyes
-- styling rules designed to make important information easy to find
-- precise lightness relationships calculated using CIE Lab colorspace
-- parameterized: adjust foreground, background or contrast
-  and generate all other shades from that
+- moderate **contrast** - very readable but not tiring to the eyes
+- precise **lightness** relationships calculated using scientific
+  [CIE Lab](http://en.wikipedia.org/wiki/Lab_color_space) color space
+- accent colors and formatting styles assigned based on
+  **semantic** meaning of tokens
+- **accessible** - easy to adapt to people with color vision deficiencies
+- fully **parameterized** - easy to generate your own version
+  with customized hues or contrast
 
 
 Theme installation
