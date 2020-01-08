@@ -27,6 +27,8 @@ Features
 - fully **parameterized** - easy to generate your own version
   with customized hues or contrast
 
+Read more in the [design document](DESIGN.md).
+
 
 The themes (with screenshots)
 -----------------------------
