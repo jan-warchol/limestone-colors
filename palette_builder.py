@@ -84,7 +84,7 @@ class Palette(object):
                 # Accents may have different lightness than foreground. Adjust
                 # lightness of desaturated variants to ensure smooth transition.
                 l = orig_l * saturation + self.fg.lab_l * (1-saturation)
-                l = min(l * brightness, 100)
+                l *= brightness
                 self.accent_colors[name + "_" + suffix] = (l, a, b)
 
     def build_shades(self, shade_specs):
@@ -109,19 +109,32 @@ class Palette(object):
     def foreground_shade(self, relative_lightness):
         """Calculate a color derived from foreground."""
         l = self.bg.lab_l + relative_lightness * self.contrast
-        return (min(l, 100), self.fg.lab_a, self.fg.lab_b)
+        return (l, self.fg.lab_a, self.fg.lab_b)
 
     def background_shade(self, relative_lightness):
         """Calculate a color derived from background."""
         l = self.bg.lab_l + relative_lightness * self.contrast
         return (l, self.bg.lab_a, self.bg.lab_b)
 
+    @staticmethod
+    def clamp_rgb_color(color):
+        """Ensure each coordinate is within displayable range (from 0 to 1)."""
+        attributes = ['rgb_r', 'rgb_g', 'rgb_b']
+        for name in attributes:
+            setattr(color, name, min(getattr(color, name), 1))
+            # lower boundary is handled by colormath
+        return color
+
     def get_all_colors(self):
-        """Return a dictionary with all color coordinates."""
+        """Return a dict of all color coords, rounded for better viewing."""
+        def round_coords(coordinates):
+            # 2 decimal places is enough considering we'll convert to 8-bit RGB
+            return tuple([round(coord, 2) for coord in coordinates])
+
         result = {}
         result.update(self.base_shades)
         result.update(self.accent_colors)
-        return result
+        return {name: round_coords(color) for name, color in result.items()}
 
     def get_lab_colors(self):
         """Return a dictionary of Lab color objects (not just coordinates)."""
@@ -133,7 +146,7 @@ class Palette(object):
     def get_rgb_colors(self):
         """Return a dictionary of sRGB color objects (not just coordinates)."""
         return {
-            name: convert_color(lab, sRGBColor)
+            name: Palette.clamp_rgb_color(convert_color(lab, sRGBColor))
             for name, lab in self.get_lab_colors().items()
         }
 
