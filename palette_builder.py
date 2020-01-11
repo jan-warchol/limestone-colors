@@ -39,10 +39,10 @@ class Palette(object):
             self.build_shades(shade_specs)
 
     @classmethod
-    def load_from_module(cls, module_name):
+    def load_from_path(cls, path):
         """Init from module containig specs, with accent colors if present."""
-        import importlib
-        config = importlib.import_module(module_name)
+        from utils import import_module_from_path
+        config = import_module_from_path(path)
 
         print("Creating palette \"{}\"...".format(config.name))
         result = cls(config.name,
@@ -60,18 +60,6 @@ class Palette(object):
             print("No information about accent colors, skipping.")
 
         return result
-
-    @classmethod
-    def load_from_path(cls, path):
-        """Dynamically import module with specifications from path."""
-        import os, sys
-        module_dir = os.path.dirname(path)
-        if module_dir not in sys.path:
-            sys.path.insert(0, module_dir)
-
-        file_name = os.path.basename(path)
-        module_name = file_name.replace(".py", "")
-        return cls.load_from_module(module_name)
 
     def build_variants(self, colors, variant_specs):
         """Add accent colors + variants with different lightness/saturation."""
