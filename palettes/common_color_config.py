@@ -1,6 +1,6 @@
 from __future__ import division
 
-# what's the lightness of a shade on the scale from 0 (bg) to 1 (fg)
+# lightness of a shade on the scale from 0 (background) to 1 (foreground)
 shades_lightness = {
     "bg_0":  0,
     "bg_1":  1/12,

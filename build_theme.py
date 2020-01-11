@@ -58,7 +58,7 @@ def build_templating_values(palette, styling_rules):
         mapping["version"] = f.read().strip()
 
     for token, (color_name, style) in styling_rules.items():
-        rgb_color = palette.rgb_values()[color_name]
+        rgb_color = palette.get_rgb_values()[color_name]
         mapping[token] = {
             "color": rgb_color,
             "style": style,
@@ -67,7 +67,7 @@ def build_templating_values(palette, styling_rules):
         }
 
     # we want to use color names directly e.g. for editor-specific settings
-    mapping.update(palette.rgb_values())
+    mapping.update(palette.get_rgb_values())
 
     return mapping
 
