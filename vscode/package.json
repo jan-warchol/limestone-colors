@@ -12,24 +12,24 @@
     "contributes": {
         "themes": [
             {
-                "label": "Monochrome grey 60 0.5",
+                "label": "Monochrome 0.5",
                 "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-grey-60-0.5.json"
+                "path": "./themes/monochrome-0.5.json"
             },
             {
-                "label": "Monochrome grey 60 0.4",
+                "label": "Monochrome 0.4",
                 "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-grey-60-0.4.json"
+                "path": "./themes/monochrome-0.4.json"
             },
             {
-                "label": "Monochrome grey 60 0.2vs",
+                "label": "Monochrome 0.2vs",
                 "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-grey-60-0.2v.json"
+                "path": "./themes/monochrome-0.2v.json"
             },
             {
-                "label": "Monochrome grey 60 0.1vs",
+                "label": "Monochrome 0.1vs",
                 "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-grey-60-0.1v.json"
+                "path": "./themes/monochrome-0.1v.json"
             }
         ]
     }

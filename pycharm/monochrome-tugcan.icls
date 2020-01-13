@@ -1,10 +1,10 @@
-<scheme name="Monochrome grey 60 v0.5" version="142" parent_scheme="Darcula">
+<scheme name="Monochrome v0.5" version="142" parent_scheme="Darcula">
   <metaInfo>
     <property name="created">2019-12-20T13:49:11</property>
     <property name="ide">Python</property>
     <property name="ideVersion">2019.2.3.0.0</property>
     <property name="modified">2019-12-20T13:49:18</property>
-    <property name="originalScheme">Monochrome grey 60 v0.5</property>
+    <property name="originalScheme">Monochrome v0.5</property>
   </metaInfo>
   <colors>
     <option name="CARET_ROW_COLOR" value="303030" />

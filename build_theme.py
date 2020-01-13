@@ -6,7 +6,7 @@ from pprint import pprint
 from os import path
 import sys
 import palette_builder as builder
-import token_styling
+from utils import import_module_from_path
 import argparse
 import re
 
@@ -77,9 +77,11 @@ def build_templating_values(palette, styling_rules):
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument("--palette", "-p", required=True)
 parser.add_argument("--template", "-t", required=True)
+parser.add_argument("--styling", "-s", required=True)
 args = parser.parse_args()
 
 palette = builder.Palette.load_from_path(args.palette)
+token_styling = import_module_from_path(args.styling)
 values = build_templating_values(palette, token_styling.rules)
 
 with open(args.template, "r") as f:
