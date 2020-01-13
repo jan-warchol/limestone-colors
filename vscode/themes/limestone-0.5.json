@@ -1,0 +1,234 @@
+{
+	"name": "Limestone 0.5",
+	"type": "dark",
+	"colors": {
+		"editor.background":                   "#262626",
+		"editor.foreground":                   "#b9b9b9",
+		"editorCursor.foreground":             "#b9b9b9",
+		"editorLineNumber.foreground":         "#6a6a6a",
+		"editorLineNumber.activeForeground":   "#b9b9b9",
+		"editorIndentGuide.background":        "#474747",
+		"editorIndentGuide.activeBackground":  "#6a6a6a",
+		"editor.selectionBackground":          "#474747",
+		"editor.inactiveSelectionBackground":  "#303030",
+		"editor.selectionHighlightBackground": "#262626",
+		"editor.selectionHighlightBorder":     "#474747"
+	},
+	"tokenColors": [
+		{
+			"scope": "comment",
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#6a6a6a"
+			}
+		},
+		{
+			"scope": "string",
+			"settings": {
+				"fontStyle": "normal",
+				"foreground": "#919191"
+			}
+		},
+		{
+			"scope": "string.quoted.docstring",
+			"settings": {
+				"fontStyle": "normal",
+				"foreground": "#6a6a6a"
+			}
+		},
+		{
+			"name": "special elements in doc comments",
+			"scope": "storage.type.class.jsdoc",
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#797979"
+			}
+		},
+		{
+			"name": "string interpolation and escaping",
+			"scope": [
+				"string.constant.character.escape",
+				"constant.character.format",
+				"constant.character.escape",
+				"punctuation.section.embedded",
+				"punctuation.definition.template-expression.begin",
+				"punctuation.definition.template-expression.end"
+			],
+			"settings": {
+				"fontStyle": "normal",
+				"foreground": "#e2e2e2"
+			}
+		},
+		{
+			"scope": "constant",
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#b9b9b9"
+			}
+		},
+		{
+			"scope": "constant.numeric",
+			"settings": {
+				"fontStyle": "normal",
+				"foreground": "#00a8ff"
+			}
+		},
+		{
+			"scope": "constant.language",
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#00a8ff"
+			}
+		},
+		{
+			"name": "keywords (including function and class defs)",
+			"scope": [
+				"keyword.control",
+				"storage.type.function",
+				"storage.type.class"
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#d4d4d4"
+			}
+		},
+		{
+			"name": "imports",
+			"scope": [
+				"keyword.control.import",
+				"keyword.other.import"
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#dbb333"
+			}
+		},
+		{
+			"scope": "keyword.operator",
+			"settings": {
+				"fontStyle": "normal",
+				"foreground": "#dbb333"
+			}
+		},
+		{
+			"name": "types and type modifiers",
+			"scope": "storage",
+			"settings": {
+				"fontStyle": "bold italic",
+				"foreground": "#797979"
+			}
+		},
+		{
+			"name": "keyword argument name in function call",
+			"scope": "variable.parameter.function-call",
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#9e9e9e"
+			}
+		},
+		{
+			"name": "reserved variables like this, super, self",
+			"scope": "variable.language",
+			"settings": {
+				"fontStyle": "bold italic",
+				"foreground": "#797979"
+			}
+		},
+		{
+			"name": "built-ins, things from library/framework",
+			"scope": "support",
+			"settings": {
+				"fontStyle": "normal",
+				"foreground": "#d3b566"
+			}
+		},
+		{
+			"scope": "support.type.exception",
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#e2e2e2"
+			}
+		},
+		{
+			"scope": "entity.name.function.decorator",
+			"settings": {
+				"fontStyle": "bold italic",
+				"foreground": "#9e9e9e"
+			}
+		},
+		{
+			"name": "Name of the defined class",
+			"scope": [
+				"entity.name.class",
+				"entity.name.type.class"
+			],
+			"settings": {
+				"fontStyle": "bold underline",
+				"foreground": "#d4d4d4"
+			}
+		},
+		{
+			"name": "Name of the defined function",
+			"scope": [
+				"entity.name.function",
+				"entity.name.function.declaration"
+			],
+			"settings": {
+				"fontStyle": "underline",
+				"foreground": "#d4d4d4"
+			}
+		},
+		{
+			"name": "function calls (works only for some languages)",
+			"scope": "meta.function-call.generic",
+			"settings": {
+				"fontStyle": "normal",
+				"foreground": "#b9b9b9"
+			}
+		},
+		{
+			"name": "function calls and defs use the same scope in JS",
+			"scope": "entity.name.function.js",
+			"settings": {
+				"fontStyle": "normal",
+				"foreground": "#b9b9b9"
+			}
+		},
+		{
+			"name": "ordinary variables (should by default use basic styling)",
+			"scope": "variable",
+			"settings": {
+				"foreground": "#b9b9b9"
+			}
+		},
+		{
+			"scope": "variable.parameter",
+			"settings": {
+				"fontStyle": "normal",
+				"foreground": "#b9b9b9"
+			}
+		},
+		{
+			"name": "dots, parens etc. (token separators)",
+			"scope": [
+				"punctuation.definition.block",
+				"punctuation.definition.parameters",
+				"punctuation.definition.arguments",
+				"punctuation.definition.list",
+				"punctuation.definition.dict",
+				"punctuation.definition.binding-pattern",
+				"punctuation.section.block",
+				"punctuation.section.function",
+				"punctuation.section.method",
+				"punctuation.section.class",
+				"punctuation.section.array",
+				"punctuation.separator",
+				"punctuation.accessor"
+			],
+			"settings": {
+				"fontStyle": "normal",
+				"foreground": "#e2e2e2"
+			}
+		}
+	]
+}
