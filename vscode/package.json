@@ -12,49 +12,24 @@
     "contributes": {
         "themes": [
             {
+                "label": "Limestone baseline",
+                "uiTheme": "vs-dark",
+                "path": "./themes/limestone-0.6.json"
+            },
+            {
                 "label": "Limestone 0.7",
                 "uiTheme": "vs-dark",
                 "path": "./themes/limestone-0.7.json"
             },
             {
-                "label": "Monochrome 0.7",
-                "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-0.7.json"
-            },
-            {
-                "label": "Limestone 0.6",
-                "uiTheme": "vs-dark",
-                "path": "./themes/limestone-0.6.json"
-            },
-            {
-                "label": "Monochrome 0.6",
+                "label": "Monochrome baseline",
                 "uiTheme": "vs-dark",
                 "path": "./themes/monochrome-0.6.json"
             },
             {
-                "label": "Limestone 0.5",
+                "label": "Monochrome 0.7",
                 "uiTheme": "vs-dark",
-                "path": "./themes/limestone-0.5.json"
-            },
-            {
-                "label": "Monochrome 0.5",
-                "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-0.5.json"
-            },
-            {
-                "label": "Monochrome 0.4",
-                "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-0.4.json"
-            },
-            {
-                "label": "Monochrome 0.2vs",
-                "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-0.2v.json"
-            },
-            {
-                "label": "Monochrome 0.1vs",
-                "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-0.1v.json"
+                "path": "./themes/monochrome-0.7.json"
             }
         ]
     }
