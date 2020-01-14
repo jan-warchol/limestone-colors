@@ -47,15 +47,29 @@
 				"constant.character.format",
 				"constant.character.escape",
 				"punctuation.section.embedded",
-				"punctuation.definition.template-expression.begin",
-				"punctuation.definition.template-expression.end"
+				"punctuation.definition.template-expression"
 			],
 			"settings": {
 				{{ str_special.vscode }}
 			}
 		},
 		{
-			"scope": "constant",
+			"name": "code embedded in string interpolation",
+			"scope": [
+				"meta.embedded"
+			],
+			"settings": {
+				{#- ensure no styling is inherited from "parent" string #}
+				"fontStyle": "normal",
+				"foreground": "#{{ fg_0 }}"
+			}
+		},
+		{
+			"name": "constant",
+			"scope": [
+				"constant",
+				"variable.other.constant"
+			],
 			"settings": {
 				{{ constant.vscode }}
 			}
@@ -134,7 +148,11 @@
 			}
 		},
 		{
-			"scope": "entity.name.function.decorator",
+			"name": "Function decorator and similar elements",
+			"scope": [
+				"entity.name.function.decorator",
+				"support.type.python"
+			],
 			"settings": {
 				{{ decorator.vscode }}
 			}
@@ -187,6 +205,11 @@
 			}
 		},
 		{
+			{#-
+				Note that we cannot style whole punctuation.definition scope,
+				because it contains subscopes like string, comment, variable
+				etc. which we definitely don't want to style this way.
+			#}
 			"name": "dots, parens etc. (token separators)",
 			"scope": [
 				"punctuation.definition.block",
@@ -195,13 +218,10 @@
 				"punctuation.definition.list",
 				"punctuation.definition.dict",
 				"punctuation.definition.binding-pattern",
-				"punctuation.section.block",
-				"punctuation.section.function",
-				"punctuation.section.method",
-				"punctuation.section.class",
-				"punctuation.section.array",
+				"punctuation.parenthesis",
 				"punctuation.separator",
-				"punctuation.accessor"
+				"punctuation.accessor",
+				"punctuation.section"
 			],
 			"settings": {
 				{{ punctuation.vscode }}

@@ -10,6 +10,7 @@ Formatting should be either "normal" or a combination of
 rules = {
     # non-code (information and metadata)
     "comment":         ("dim_0", "italic"),
+    "todo_comment":    ("dim_0", "italic"),
     "doc_comment":     ("dim_0", "normal"),
     "doc_special":     ("dim_1", "bold"),
 
