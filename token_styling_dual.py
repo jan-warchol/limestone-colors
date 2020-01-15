@@ -19,7 +19,7 @@ rules = {
     "str_special":     ("fg_2",  "normal"),
     "number":          ("secondary",  "normal"),
     "boolean":         ("secondary",  "italic"),
-    "constant":        ("fg_0",  "italic"),
+    "constant":        ("dim_3", "bold"),
 
     # language reserved words
     "keyword":         ("fg_1",  "bold"),
