@@ -15,15 +15,15 @@ rules = {
     "doc_special":     ("dim_1", "bold"),
 
     # literals and constants
-    "string":          ("dim_2", "normal"),
+    "string":          ("secondary_2_3", "normal"),
     "str_special":     ("fg_2",  "normal"),
     "number":          ("secondary",  "normal"),
     "boolean":         ("secondary",  "italic"),
     "constant":        ("dim_3", "bold"),
 
     # language reserved words
-    "keyword":         ("fg_1",  "bold"),
-    "import":          ("primary",  "bold"),
+    "keyword":         ("primary_1_2",  "bold"),
+    "import":          ("primary_1_2",  "bold"),
     "operator":        ("primary",  "normal"),
 
     # "meta" tokens that supplement other elements
