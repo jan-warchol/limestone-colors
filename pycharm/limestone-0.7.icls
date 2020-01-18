@@ -1,4 +1,4 @@
-<scheme name="{{ name }} {{ version }}" version="1" parent_scheme="Darcula">
+<scheme name="Limestone 0.7" version="1" parent_scheme="Darcula">
   <metaInfo>
     <property name="created">2019-11-04T00:42:01</property>
     <property name="ide">PyCharmCore</property>
@@ -7,77 +7,87 @@
     <property name="originalScheme">stub</property>
   </metaInfo>
   <colors>
-    <option name="CARET_ROW_COLOR" value="{{ bg_1 }}" />
-    <option name="FOLDED_TEXT_BORDER_COLOR" value="{{ fg_0 }}" />
-    <option name="GUTTER_BACKGROUND" value="{{ bg_1 }}" />
-    <option name="LINE_NUMBERS_COLOR" value="{{ dim_0 }}" />
-    <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="{{ fg_0 }}" />
-    <option name="SELECTION_BACKGROUND" value="{{ bg_3 }}" />
+    <option name="CARET_ROW_COLOR" value="303030" />
+    <option name="FOLDED_TEXT_BORDER_COLOR" value="b9b9b9" />
+    <option name="GUTTER_BACKGROUND" value="303030" />
+    <option name="LINE_NUMBERS_COLOR" value="6a6a6a" />
+    <option name="LINE_NUMBER_ON_CARET_ROW_COLOR" value="b9b9b9" />
+    <option name="SELECTION_BACKGROUND" value="474747" />
   </colors>
   <attributes>
     <option name="DEFAULT_BLOCK_COMMENT">
       <value>
-        {{ comment.pycharm }}
+        <option name="FOREGROUND" value="6a6a6a" />
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="DEFAULT_BRACES">
       <value>
-        {{ punctuation.pycharm }}
+        <option name="FOREGROUND" value="e2e2e2" />
       </value>
     </option>
     <option name="DEFAULT_BRACKETS">
       <value>
-        {{ punctuation.pycharm }}
+        <option name="FOREGROUND" value="e2e2e2" />
       </value>
     </option>
     <option name="DEFAULT_CLASS_NAME">
       <value>
-        {{ class_def.pycharm }}
+        <option name="FOREGROUND" value="d4d4d4" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" value="d4d4d4" />
+        <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_COMMA">
       <value>
-        {{ punctuation.pycharm }}
+        <option name="FOREGROUND" value="e2e2e2" />
       </value>
     </option>
     <option name="DEFAULT_CONSTANT">
       <value>
-        {{ constant.pycharm }}
+        <option name="FOREGROUND" value="9e9e9e" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_DOC_COMMENT">
       <value>
-        {{ doc_comment.pycharm }}
+        <option name="FOREGROUND" value="6a6a6a" />
       </value>
     </option>
     <option name="DEFAULT_DOC_COMMENT_TAG">
       <value>
-        {{ doc_special.pycharm }}
+        <option name="FOREGROUND" value="797979" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_DOC_COMMENT_TAG_VALUE">
       <value>
-        {{ doc_special.pycharm }}
+        <option name="FOREGROUND" value="797979" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_DOC_MARKUP">
       <value>
-        {{ doc_special.pycharm }}
+        <option name="FOREGROUND" value="797979" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_DOT">
       <value>
-        {{ punctuation.pycharm }}
+        <option name="FOREGROUND" value="e2e2e2" />
       </value>
     </option>
     <option name="DEFAULT_FUNCTION_CALL">
       <value>
-        {{ function_call.pycharm }}
+        <option name="FOREGROUND" value="b9b9b9" />
       </value>
     </option>
     <option name="DEFAULT_FUNCTION_DECLARATION">
       <value>
-        {{ function_def.pycharm }}
+        <option name="FOREGROUND" value="d4d4d4" />
+        <option name="EFFECT_COLOR" value="d4d4d4" />
+        <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_IDENTIFIER" baseAttributes="TEXT" />
@@ -85,108 +95,116 @@
     <option name="DEFAULT_INSTANCE_METHOD" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
     <option name="DEFAULT_KEYWORD">
       <value>
-        {{ keyword.pycharm }}
+        <option name="FOREGROUND" value="ceb67b" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_LINE_COMMENT">
       <value>
-        {{ comment.pycharm }}
+        <option name="FOREGROUND" value="6a6a6a" />
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="DEFAULT_METADATA">
       <value>
-        {{ decorator.pycharm }}
+        <option name="FOREGROUND" value="d3b566" />
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="DEFAULT_NUMBER">
       <value>
-        {{ number.pycharm }}
+        <option name="FOREGROUND" value="00a8ff" />
       </value>
     </option>
     <option name="DEFAULT_OPERATION_SIGN">
       <value>
-        {{ operator.pycharm }}
+        <option name="FOREGROUND" value="dbb333" />
       </value>
     </option>
     <option name="DEFAULT_PARAMETER">
       <value>
-        {{ parameter.pycharm }}
+        <option name="FOREGROUND" value="b9b9b9" />
       </value>
     </option>
     <option name="DEFAULT_PARENTHS">
       <value>
-        {{ punctuation.pycharm }}
+        <option name="FOREGROUND" value="e2e2e2" />
       </value>
     </option>
     <option name="DEFAULT_PREDEFINED_SYMBOL">
       <value>
-        {{ built_in.pycharm }}
+        <option name="FOREGROUND" value="d3b566" />
       </value>
     </option>
     <option name="DEFAULT_REASSIGNED_LOCAL_VARIABLE">
       <value>
-        <option name="EFFECT_COLOR" value="{{ fg_0 }}" />
+        <option name="EFFECT_COLOR" value="b9b9b9" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_REASSIGNED_PARAMETER">
       <value>
-        <option name="EFFECT_COLOR" value="{{ fg_0 }}" />
+        <option name="EFFECT_COLOR" value="b9b9b9" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_SEMICOLON">
       <value>
-        {{ punctuation.pycharm }}
+        <option name="FOREGROUND" value="e2e2e2" />
       </value>
     </option>
     <option name="DEFAULT_STATIC_FIELD" baseAttributes="DEFAULT_IDENTIFIER" />
     <option name="DEFAULT_STATIC_METHOD" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
     <option name="DEFAULT_STRING">
       <value>
-        {{ string.pycharm }}
+        <option name="FOREGROUND" value="6eade7" />
       </value>
     </option>
     <option name="DEFAULT_VALID_STRING_ESCAPE">
       <value>
-        {{ str_special.pycharm }}
+        <option name="FOREGROUND" value="e2e2e2" />
       </value>
     </option>
     <option name="JS.GLOBAL_FUNCTION" baseAttributes="DEFAULT_FUNCTION_DECLARATION" />
     <option name="JS.GLOBAL_VARIABLE" baseAttributes="DEFAULT_GLOBAL_VARIABLE" />
     <option name="JS.INSTANCE_MEMBER_FUNCTION">
       <value>
-        {{ function.pycharm }}
+        <option name="FOREGROUND" value="b9b9b9" />
       </value>
     </option>
     <option name="JS.LOCAL_VARIABLE" baseAttributes="DEFAULT_LOCAL_VARIABLE" />
     <option name="JS.PRIMITIVE.TYPE">
       <value>
-        {{ type.pycharm }}
+        <option name="FOREGROUND" value="797979" />
+        <option name="FONT_TYPE" value="3" />
       </value>
     </option>
     <option name="PY.ANNOTATION">
       <value>
-        {{ type.pycharm }}
+        <option name="FOREGROUND" value="797979" />
+        <option name="FONT_TYPE" value="3" />
       </value>
     </option>
     <option name="PY.BUILTIN_NAME" baseAttributes="DEFAULT_PREDEFINED_SYMBOL" />
     <option name="PY.DECORATOR">
       <value>
-        {{ decorator.pycharm }}
+        <option name="FOREGROUND" value="d3b566" />
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="PY.KEYWORD" baseAttributes="DEFAULT_KEYWORD" />
     <option name="PY.KEYWORD_ARGUMENT">
       <value>
-        {{ keyword_arg.pycharm }}
+        <option name="FOREGROUND" value="9e9e9e" />
+        <option name="FONT_TYPE" value="2" />
       </value>
     </option>
     <option name="PY.PREDEFINED_DEFINITION" baseAttributes="DEFAULT_PREDEFINED_SYMBOL" />
     <option name="PY.PREDEFINED_USAGE" baseAttributes="DEFAULT_PREDEFINED_SYMBOL" />
     <option name="PY.SELF_PARAMETER">
       <value>
-        {{ special_var.pycharm }}
+        <option name="FOREGROUND" value="797979" />
+        <option name="FONT_TYPE" value="3" />
       </value>
     </option>
     <option name="PY.STRING.B">
@@ -194,19 +212,21 @@
     </option>
     <option name="TEXT">
       <value>
-        <option name="FOREGROUND" value="{{ fg_0 }}" />
-        <option name="BACKGROUND" value="{{ bg_0 }}" />
+        <option name="FOREGROUND" value="b9b9b9" />
+        <option name="BACKGROUND" value="262626" />
       </value>
     </option>
     <option name="TODO_DEFAULT_ATTRIBUTES">
       <value>
-        {{ todo_comment.pycharm }}
+        <option name="FOREGROUND" value="6a6a6a" />
+        <option name="FONT_TYPE" value="2" />
         <option name="ERROR_STRIPE_COLOR" value="dbb333" />
       </value>
     </option>
     <option name="TS.TYPE_PARAMETER">
       <value>
-        {{ type.pycharm }}
+        <option name="FOREGROUND" value="797979" />
+        <option name="FONT_TYPE" value="3" />
       </value>
     </option>
   </attributes>

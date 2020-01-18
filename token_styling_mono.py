@@ -10,6 +10,7 @@ Formatting should be either "normal" or a combination of
 rules = {
     # non-code (information and metadata)
     "comment":         ("dim_0", "italic"),
+    "todo_comment":    ("dim_0", "italic"),
     "doc_comment":     ("dim_0", "normal"),
     "doc_special":     ("dim_1", "bold"),
 
@@ -18,12 +19,12 @@ rules = {
     "str_special":     ("fg_2",  "normal"),
     "number":          ("fg_0",  "normal"),
     "boolean":         ("fg_0",  "italic"),
-    "constant":        ("fg_0",  "italic"),
+    "constant":        ("dim_3", "bold"),
 
     # language reserved words
     "keyword":         ("fg_1",  "bold"),
     "import":          ("fg_1",  "bold"),
-    "operator":        ("fg_0",  "normal"),
+    "operator":        ("fg_2",  "normal"),
 
     # "meta" tokens that supplement other elements
     "type":            ("dim_1", "bold italic"),

@@ -1,43 +1,47 @@
 {
-	"name": "{{ name }} {{ version }}",
+	"name": "Limestone 0.7",
 	"type": "dark",
 	"colors": {
-		"editor.background":                   "#{{ bg_0 }}",
-		"editor.foreground":                   "#{{ fg_0 }}",
-		"editorCursor.foreground":             "#{{ fg_0 }}",
-		"editorLineNumber.foreground":         "#{{ dim_0 }}",
-		"editorLineNumber.activeForeground":   "#{{ fg_0 }}",
-		"editorIndentGuide.background":        "#{{ bg_3 }}",
-		"editorIndentGuide.activeBackground":  "#{{ dim_0 }}",
-		"editor.selectionBackground":          "#{{ bg_3 }}",
-		"editor.inactiveSelectionBackground":  "#{{ bg_1 }}",
-		"editor.selectionHighlightBackground": "#{{ bg_0 }}",
-		"editor.selectionHighlightBorder":     "#{{ bg_3 }}"
+		"editor.background":                   "#262626",
+		"editor.foreground":                   "#b9b9b9",
+		"editorCursor.foreground":             "#b9b9b9",
+		"editorLineNumber.foreground":         "#6a6a6a",
+		"editorLineNumber.activeForeground":   "#b9b9b9",
+		"editorIndentGuide.background":        "#474747",
+		"editorIndentGuide.activeBackground":  "#6a6a6a",
+		"editor.selectionBackground":          "#474747",
+		"editor.inactiveSelectionBackground":  "#303030",
+		"editor.selectionHighlightBackground": "#262626",
+		"editor.selectionHighlightBorder":     "#474747"
 	},
 	"tokenColors": [
 		{
 			"scope": "comment",
 			"settings": {
-				{{ comment.vscode }}
+				"fontStyle": "italic",
+				"foreground": "#6a6a6a"
 			}
 		},
 		{
 			"scope": "string",
 			"settings": {
-				{{ string.vscode }}
+				"fontStyle": "normal",
+				"foreground": "#6eade7"
 			}
 		},
 		{
 			"scope": "string.quoted.docstring",
 			"settings": {
-				{{ doc_comment.vscode }}
+				"fontStyle": "normal",
+				"foreground": "#6a6a6a"
 			}
 		},
 		{
 			"name": "special elements in doc comments",
 			"scope": "storage.type.class.jsdoc",
 			"settings": {
-				{{ doc_special.vscode }}
+				"fontStyle": "bold",
+				"foreground": "#797979"
 			}
 		},
 		{
@@ -50,7 +54,8 @@
 				"punctuation.definition.template-expression"
 			],
 			"settings": {
-				{{ str_special.vscode }}
+				"fontStyle": "normal",
+				"foreground": "#e2e2e2"
 			}
 		},
 		{
@@ -59,9 +64,8 @@
 				"meta.embedded"
 			],
 			"settings": {
-				{#- ensure no styling is inherited from "parent" string #}
 				"fontStyle": "normal",
-				"foreground": "#{{ fg_0 }}"
+				"foreground": "#b9b9b9"
 			}
 		},
 		{
@@ -71,19 +75,22 @@
 				"variable.other.constant"
 			],
 			"settings": {
-				{{ constant.vscode }}
+				"fontStyle": "bold",
+				"foreground": "#9e9e9e"
 			}
 		},
 		{
 			"scope": "constant.numeric",
 			"settings": {
-				{{ number.vscode }}
+				"fontStyle": "normal",
+				"foreground": "#00a8ff"
 			}
 		},
 		{
 			"scope": "constant.language",
 			"settings": {
-				{{ boolean.vscode }}
+				"fontStyle": "italic",
+				"foreground": "#00a8ff"
 			}
 		},
 		{
@@ -94,7 +101,8 @@
 				"storage.type.class"
 			],
 			"settings": {
-				{{ keyword.vscode }}
+				"fontStyle": "bold",
+				"foreground": "#ceb67b"
 			}
 		},
 		{
@@ -104,47 +112,54 @@
 				"keyword.other.import"
 			],
 			"settings": {
-				{{ import.vscode }}
+				"fontStyle": "bold",
+				"foreground": "#ceb67b"
 			}
 		},
 		{
 			"scope": "keyword.operator",
 			"settings": {
-				{{ operator.vscode }}
+				"fontStyle": "normal",
+				"foreground": "#dbb333"
 			}
 		},
 		{
 			"name": "types and type modifiers",
 			"scope": "storage",
 			"settings": {
-				{{ type.vscode }}
+				"fontStyle": "bold italic",
+				"foreground": "#797979"
 			}
 		},
 		{
 			"name": "keyword argument name in function call",
 			"scope": "variable.parameter.function-call",
 			"settings": {
-				{{ keyword_arg.vscode }}
+				"fontStyle": "italic",
+				"foreground": "#9e9e9e"
 			}
 		},
 		{
 			"name": "reserved variables like this, super, self",
 			"scope": "variable.language",
 			"settings": {
-				{{ special_var.vscode }}
+				"fontStyle": "bold italic",
+				"foreground": "#797979"
 			}
 		},
 		{
 			"name": "built-ins, things from library/framework",
 			"scope": "support",
 			"settings": {
-				{{ built_in.vscode }}
+				"fontStyle": "normal",
+				"foreground": "#d3b566"
 			}
 		},
 		{
 			"scope": "support.type.exception",
 			"settings": {
-				{{ exception.vscode }}
+				"fontStyle": "bold",
+				"foreground": "#e2e2e2"
 			}
 		},
 		{
@@ -154,7 +169,8 @@
 				"support.type.python"
 			],
 			"settings": {
-				{{ decorator.vscode }}
+				"fontStyle": "italic",
+				"foreground": "#d3b566"
 			}
 		},
 		{
@@ -164,7 +180,8 @@
 				"entity.name.type.class"
 			],
 			"settings": {
-				{{ class_def.vscode }}
+				"fontStyle": "bold underline",
+				"foreground": "#d4d4d4"
 			}
 		},
 		{
@@ -174,42 +191,41 @@
 				"entity.name.function.declaration"
 			],
 			"settings": {
-				{{ function_def.vscode }}
+				"fontStyle": "underline",
+				"foreground": "#d4d4d4"
 			}
 		},
 		{
 			"name": "function calls (works only for some languages)",
 			"scope": "meta.function-call.generic",
 			"settings": {
-				{{ function_call.vscode }}
+				"fontStyle": "normal",
+				"foreground": "#b9b9b9"
 			}
 		},
 		{
 			"name": "function calls and defs use the same scope in JS",
 			"scope": "entity.name.function.js",
 			"settings": {
-				{{ function.vscode }}
+				"fontStyle": "normal",
+				"foreground": "#b9b9b9"
 			}
 		},
 		{
 			"name": "ordinary variables (should by default use basic styling)",
 			"scope": "variable",
 			"settings": {
-				"foreground": "#{{ fg_0 }}"
+				"foreground": "#b9b9b9"
 			}
 		},
 		{
 			"scope": "variable.parameter",
 			"settings": {
-				{{ parameter.vscode }}
+				"fontStyle": "normal",
+				"foreground": "#b9b9b9"
 			}
 		},
 		{
-			{#-
-				Note that we cannot style whole punctuation.definition scope,
-				because it contains subscopes like string, comment, variable
-				etc. which we definitely don't want to style this way.
-			#}
 			"name": "dots, parens etc. (token separators)",
 			"scope": [
 				"punctuation.definition.block",
@@ -224,7 +240,8 @@
 				"punctuation.section"
 			],
 			"settings": {
-				{{ punctuation.vscode }}
+				"fontStyle": "normal",
+				"foreground": "#e2e2e2"
 			}
 		}
 	]
