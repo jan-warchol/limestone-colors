@@ -5,9 +5,10 @@ _Limestone_ is a family of color themes for IDEs and text editors.
 
 ![limestone logo](https://i.imgur.com/V6rZL00.png)
 
-Project goal is to design syntax highlighting with **high readability** (making
-important information easy to see, and putting boilerplate in the background)
-using a limited set of colors (so that the result doesn't jump on you).
+Project goal is to design the **most readable** syntax highlighting - convey as
+much information about the tokens as possible (thus enhancing the understanding
+of the code), but do it in a clear, organized way, without overwhelming the
+reader with too many intense colors.
 
 It's currently in active development, approaching beta release. **See
 [`devel`](https://github.com/jan-warchol/monochrome-syntax/tree/devel) branch
@@ -27,6 +28,25 @@ Features
   with customized hues or contrast
 
 
+The themes (with screenshots)
+-----------------------------
+
+The limestone family consists of several themes with different amount or color used:
+
+- monochrome version: the absolute minimum. You'll be surprised how much
+  information can be conveyed just by varying lightness and font styles
+  ([see screenshots](screenshots.md#limestone-monochrome)).
+
+- two-color version: moderately minimalistic version using shades of two accent
+  colors in addition to the base monochromatic color scale ([see
+  screenshots](screenshots.md#limestone-two-color)).
+
+- "full color" version: using shades of 8 accent colors. Not ready yet, I want
+  to reach the state in which the first two are mature before working on this
+  one (as working with strong constraints makes me think hard about the
+  decisions).
+
+
 Installation
 ------------
 
@@ -35,6 +55,16 @@ example:
 
 - [Visual Studio Code](vscode/)
 - [PyCharm](pycharm/)
+
+
+Supported languages
+-------------------
+
+Limestone comes with basic styling rules for all common token types (comments,
+keywords, strings etc.), which should be sufficient for **most languages**.
+However, a lot depends on the editor and the grammar it's using. There are more
+detailed styling rules for Python and JavaScript, and in the near future I plan
+to add support for Go, Ruby and Java.
 
 
 Development & contributing
