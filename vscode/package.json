@@ -12,24 +12,44 @@
     "contributes": {
         "themes": [
             {
+                "label": "Limestone test-C",
+                "uiTheme": "vs-dark",
+                "path": "./themes/limestone-test-C.json"
+            },
+            {
+                "label": "Limestone test-B",
+                "uiTheme": "vs-dark",
+                "path": "./themes/limestone-test-B.json"
+            },
+            {
+                "label": "Limestone test-A",
+                "uiTheme": "vs-dark",
+                "path": "./themes/limestone-test-A.json"
+            },
+            {
                 "label": "Limestone baseline",
                 "uiTheme": "vs-dark",
                 "path": "./themes/limestone-0.6.json"
             },
             {
-                "label": "Limestone 0.7",
+                "label": "Monochrome test-C",
                 "uiTheme": "vs-dark",
-                "path": "./themes/limestone-0.7.json"
+                "path": "./themes/monochrome-test-C.json"
+            },
+            {
+                "label": "Monochrome test-B",
+                "uiTheme": "vs-dark",
+                "path": "./themes/monochrome-test-B.json"
+            },
+            {
+                "label": "Monochrome test-A",
+                "uiTheme": "vs-dark",
+                "path": "./themes/monochrome-test-A.json"
             },
             {
                 "label": "Monochrome baseline",
                 "uiTheme": "vs-dark",
                 "path": "./themes/monochrome-0.6.json"
-            },
-            {
-                "label": "Monochrome 0.7",
-                "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-0.7.json"
             }
         ]
     }
