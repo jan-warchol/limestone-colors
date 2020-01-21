@@ -15,15 +15,15 @@ rules = {
     "doc_special":     ("dim_1", "bold"),
 
     # literals and constants
-    "string":          ("secondary_2_3", "normal"),
+    "string":          ("secondary_soft", "normal"),
     "str_special":     ("fg_2",  "normal"),
     "number":          ("secondary",  "normal"),
     "boolean":         ("secondary",  "italic"),
     "constant":        ("dim_3", "bold"),
 
     # language reserved words
-    "keyword":         ("primary_1_2",  "bold"),
-    "import":          ("primary_1_2",  "bold"),
+    "keyword":         ("primary_soft",  "bold"),
+    "import":          ("primary_soft",  "bold"),
     "operator":        ("primary",  "normal"),
 
     # "meta" tokens that supplement other elements
@@ -32,9 +32,9 @@ rules = {
     "special_var":     ("dim_1", "bold italic"),
 
     # elements that are usually predefined
-    "built_in":        ("primary_2_3",  "normal"),
+    "built_in":        ("primary_soft",  "normal"),
     "exception":       ("fg_2",  "bold"),
-    "decorator":       ("primary_2_3",  "italic"),
+    "decorator":       ("primary_soft",  "italic"),
 
     # elements that are usually user-defined
     "class_def":       ("fg_1",  "bold underline"),
