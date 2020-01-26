@@ -50,8 +50,8 @@ comments, and should be used sparingly.
 Use of font styles
 ------------------
 
-Consistent use of styling can help in showing what _function_ particular
-elements have in the code.
+Consistent use of styling can help in showing what is the _function_ of
+particular elements.
 
 ![Font styles example](https://i.imgur.com/xOpf1MG.png)
 
