@@ -7,6 +7,7 @@ matter of personal taste? Maybe there is a combination of colors that works
 better than others?
 
 ![Selection of color themes](https://i.imgur.com/bVJMIpm.png)
+_Default themes of 3 major editors: VS Code, IntelliJ and Sublime._
 
 This is the aim of Limestone project - to develop a theme that **maximizes
 readability.** With the aid of scientific tools like [CIE
