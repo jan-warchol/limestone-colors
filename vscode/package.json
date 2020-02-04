@@ -12,6 +12,16 @@
     "contributes": {
         "themes": [
             {
+                "label": "Ece pink 1",
+                "uiTheme": "vs-dark",
+                "path": "./themes/pink-for-ece-v1-0.7.json"
+            },
+            {
+                "label": "Ece pink 1",
+                "uiTheme": "vs-dark",
+                "path": "./themes/pink-for-ece-v2-0.7.json"
+            },
+            {
                 "label": "Limestone 0.7",
                 "uiTheme": "vs-dark",
                 "path": "./themes/limestone-0.7.json"
