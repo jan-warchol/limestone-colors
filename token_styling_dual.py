@@ -9,10 +9,10 @@ Formatting should be either "normal" or a combination of
 
 rules = {
     # non-code (information and metadata)
-    "comment":         ("dim_0", "italic"),
-    "todo_comment":    ("dim_0", "italic"),
-    "doc_comment":     ("dim_0", "normal"),
-    "doc_special":     ("dim_1", "bold"),
+    "comment":         ("dim_1", "italic"),
+    "todo_comment":    ("dim_1", "italic"),
+    "doc_comment":     ("dim_1", "normal"),
+    "doc_special":     ("dim_2", "bold"),
 
     # literals and constants
     "string":          ("secondary_soft", "normal"),
