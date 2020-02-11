@@ -24,7 +24,7 @@ accent_variants = {
     "soft_dim":  (3/4,   0.618),
     "soft_br":   (1+1/6, 0.618),
 
-    "softer":      (1,     0.382),
+    "softer":      (1.062, 0.382),
     "softer_dim":  (3/4,   0.382),
     "softer_br":   (1+1/6, 0.382),
 }
