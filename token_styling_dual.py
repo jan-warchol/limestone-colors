@@ -22,8 +22,8 @@ rules = {
     "constant":        ("dim_3", "bold"),
 
     # language reserved words
-    "keyword":         ("primary_soft",  "bold"),
-    "import":          ("primary_soft",  "bold"),
+    "keyword":         ("primary_softer",  "bold"),
+    "import":          ("primary_softer",  "bold"),
     "operator":        ("primary",  "normal"),
 
     # "meta" tokens that supplement other elements
