@@ -23,7 +23,8 @@ rules = {
 
     # language reserved words
     "keyword":         ("primary_softer",  "bold"),
-    "import":          ("primary_softer",  "bold"),
+    "fundef":          ("primary_softer",  "bold italic"),
+    "import":          ("primary",  "bold"),
     "operator":        ("primary",  "normal"),
 
     # "meta" tokens that supplement other elements
