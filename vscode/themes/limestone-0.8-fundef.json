@@ -1,5 +1,5 @@
 {
-	"name": "Monochrome 0.8",
+	"name": "Limestone 0.8-fundef",
 	"type": "dark",
 	"colors": {
 		"editor.background":                   "#262626",
@@ -19,21 +19,21 @@
 			"scope": "comment",
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#6a6a6a"
+				"foreground": "#7c7c7c"
 			}
 		},
 		{
 			"scope": "string",
 			"settings": {
-				"fontStyle": "bold",
-				"foreground": "#7c7c7c"
+				"fontStyle": "normal",
+				"foreground": "#76aee4"
 			}
 		},
 		{
 			"scope": "string.quoted.docstring",
 			"settings": {
 				"fontStyle": "normal",
-				"foreground": "#6a6a6a"
+				"foreground": "#7c7c7c"
 			}
 		},
 		{
@@ -41,7 +41,7 @@
 			"scope": "storage.type.class.jsdoc",
 			"settings": {
 				"fontStyle": "bold",
-				"foreground": "#7c7c7c"
+				"foreground": "#919191"
 			}
 		},
 		{
@@ -83,14 +83,14 @@
 			"scope": "constant.numeric",
 			"settings": {
 				"fontStyle": "normal",
-				"foreground": "#b9b9b9"
+				"foreground": "#00a8ff"
 			}
 		},
 		{
 			"scope": "constant.language",
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#b9b9b9"
+				"foreground": "#00a8ff"
 			}
 		},
 		{
@@ -102,7 +102,7 @@
 			],
 			"settings": {
 				"fontStyle": "bold",
-				"foreground": "#d4d4d4"
+				"foreground": "#d7c396"
 			}
 		},
 		{
@@ -113,14 +113,14 @@
 			],
 			"settings": {
 				"fontStyle": "bold",
-				"foreground": "#d4d4d4"
+				"foreground": "#d7c396"
 			}
 		},
 		{
 			"scope": "keyword.operator",
 			"settings": {
 				"fontStyle": "normal",
-				"foreground": "#e2e2e2"
+				"foreground": "#dbb333"
 			}
 		},
 		{
@@ -151,8 +151,8 @@
 			"name": "built-ins, things from library/framework",
 			"scope": "support",
 			"settings": {
-				"fontStyle": "italic",
-				"foreground": "#b9b9b9"
+				"fontStyle": "normal",
+				"foreground": "#d1b56c"
 			}
 		},
 		{
@@ -169,8 +169,8 @@
 				"support.type.python"
 			],
 			"settings": {
-				"fontStyle": "bold italic",
-				"foreground": "#9e9e9e"
+				"fontStyle": "italic",
+				"foreground": "#d1b56c"
 			}
 		},
 		{
@@ -191,8 +191,8 @@
 				"entity.name.function.declaration"
 			],
 			"settings": {
-				"fontStyle": "underline",
-				"foreground": "#d4d4d4"
+				"fontStyle": "normal",
+				"foreground": "#e2e2e2"
 			}
 		},
 		{

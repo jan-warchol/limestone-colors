@@ -12,6 +12,21 @@
     "contributes": {
         "themes": [
             {
+                "label": "Limestone 0.8-const",
+                "uiTheme": "vs-dark",
+                "path": "./themes/limestone-0.8-const.json"
+            },
+            {
+                "label": "Limestone 0.8-fundef",
+                "uiTheme": "vs-dark",
+                "path": "./themes/limestone-0.8-fundef.json"
+            },
+            {
+                "label": "Limestone 0.8-nums",
+                "uiTheme": "vs-dark",
+                "path": "./themes/limestone-0.8-nums.json"
+            },
+            {
                 "label": "Limestone 0.8",
                 "uiTheme": "vs-dark",
                 "path": "./themes/limestone-0.8.json"
