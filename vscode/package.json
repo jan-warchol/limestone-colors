@@ -37,29 +37,9 @@
                 "path": "./themes/limestone-0.8.json"
             },
             {
-                "label": "Monochrome 0.8",
-                "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-0.8.json"
-            },
-            {
                 "label": "Limestone 0.7.4-adj",
                 "uiTheme": "vs-dark",
                 "path": "./themes/limestone-0.7.4-adj.json"
-            },
-            {
-                "label": "Monochrome 0.7.4-adj",
-                "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-0.7.4-adj.json"
-            },
-            {
-                "label": "Limestone 0.7.3-gold",
-                "uiTheme": "vs-dark",
-                "path": "./themes/limestone-0.7.3-gold.json"
-            },
-            {
-                "label": "Monochrome 0.7.3-gold",
-                "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-0.7.3-gold.json"
             },
             {
                 "label": "Limestone 0.7.2-eq",
@@ -67,29 +47,9 @@
                 "path": "./themes/limestone-0.7.2-eq.json"
             },
             {
-                "label": "Monochrome 0.7.2-eq",
-                "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-0.7.2-eq.json"
-            },
-            {
                 "label": "Limestone 0.7.1-sat",
                 "uiTheme": "vs-dark",
                 "path": "./themes/limestone-0.7.1-sat.json"
-            },
-            {
-                "label": "Monochrome 0.7.1-sat",
-                "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-0.7.1-sat.json"
-            },
-            {
-                "label": "Limestone 0.7",
-                "uiTheme": "vs-dark",
-                "path": "./themes/limestone-0.7.json"
-            },
-            {
-                "label": "Monochrome 0.7",
-                "uiTheme": "vs-dark",
-                "path": "./themes/monochrome-0.7.json"
             },
             {
                 "label": "Limestone 0.6",
@@ -100,11 +60,6 @@
                 "label": "Monochrome 0.6",
                 "uiTheme": "vs-dark",
                 "path": "./themes/monochrome-0.6.json"
-            },
-            {
-                "label": "Limestone 0.5",
-                "uiTheme": "vs-dark",
-                "path": "./themes/limestone-0.5.json"
             },
             {
                 "label": "Monochrome 0.5",
