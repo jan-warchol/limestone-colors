@@ -13,8 +13,8 @@ Installation
     `$HOME/.vscode/extensions`.  The easiest way to do it is to clone the repo
     and setup a symlink like this (tested on Linux):
 
-        git clone https://github.com/jan-warchol/monochrome-syntax --branch devel
-        ln -s $PWD/monochrome-syntax/vscode $HOME/.vscode/extensions/mono-theme
+        git clone https://github.com/jan-warchol/limestone-colors
+        ln -sf $PWD/limestone-colors/vscode $HOME/.vscode/extensions/limestone
 
 1.  reload the window (`Ctrl+Shift+P` => search for `reload`; sometimes it's
     necessary to reload the window twice) or just restart VScode.
