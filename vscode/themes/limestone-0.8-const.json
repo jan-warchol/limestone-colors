@@ -94,9 +94,18 @@
 			}
 		},
 		{
-			"name": "keywords (including function and class defs)",
+			"name": "keywords",
 			"scope": [
-				"keyword.control",
+				"keyword.control"
+			],
+			"settings": {
+				"fontStyle": "bold",
+				"foreground": "#d7c396"
+			}
+		},
+		{
+			"name": "function and class defs",
+			"scope": [
 				"storage.type.function",
 				"storage.type.class"
 			],
@@ -136,7 +145,7 @@
 			"scope": "variable.parameter.function-call",
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#9e9e9e"
+				"foreground": "#a7956a"
 			}
 		},
 		{

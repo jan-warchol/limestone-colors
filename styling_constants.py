@@ -23,12 +23,13 @@ rules = {
 
     # language reserved words
     "keyword":         ("primary_softer",  "bold"),
+    "fundef":          ("primary_softer",  "bold"),
     "import":          ("primary_softer",  "bold"),
     "operator":        ("primary",  "normal"),
 
     # "meta" tokens that supplement other elements
     "type":            ("dim_1", "bold italic"),
-    "keyword_arg":     ("dim_3", "italic"),
+    "keyword_arg":     ("primary_softer_dim", "italic"),
     "special_var":     ("dim_1", "bold italic"),
 
     # elements that are usually predefined
