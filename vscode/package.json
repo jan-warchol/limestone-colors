@@ -12,6 +12,11 @@
     "contributes": {
         "themes": [
             {
+                "label": "Limestone light 0.8",
+                "uiTheme": "vs-dark",
+                "path": "./themes/limestone-light-0.8.json"
+            },
+            {
                 "label": "Limestone 0.8",
                 "uiTheme": "vs-dark",
                 "path": "./themes/limestone-0.8.json"
