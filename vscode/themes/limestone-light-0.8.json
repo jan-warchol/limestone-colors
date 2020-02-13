@@ -26,7 +26,7 @@
 			"scope": "string",
 			"settings": {
 				"fontStyle": "normal",
-				"foreground": "#5464b4"
+				"foreground": "#366cf0"
 			}
 		},
 		{
@@ -82,7 +82,7 @@
 		{
 			"scope": "constant.numeric",
 			"settings": {
-				"fontStyle": "normal",
+				"fontStyle": "bold",
 				"foreground": "#366cf0"
 			}
 		},
@@ -102,7 +102,7 @@
 			],
 			"settings": {
 				"fontStyle": "bold",
-				"foreground": "#55704b"
+				"foreground": "#2a8318"
 			}
 		},
 		{
@@ -113,13 +113,13 @@
 			],
 			"settings": {
 				"fontStyle": "bold",
-				"foreground": "#55704b"
+				"foreground": "#2a8318"
 			}
 		},
 		{
 			"scope": "keyword.operator",
 			"settings": {
-				"fontStyle": "normal",
+				"fontStyle": "bold",
 				"foreground": "#2a8318"
 			}
 		},
@@ -152,7 +152,7 @@
 			"scope": "support",
 			"settings": {
 				"fontStyle": "normal",
-				"foreground": "#457337"
+				"foreground": "#2a8318"
 			}
 		},
 		{
@@ -170,7 +170,7 @@
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#457337"
+				"foreground": "#2a8318"
 			}
 		},
 		{
