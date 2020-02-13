@@ -45,5 +45,5 @@ rules = {
     "parameter":       ("fg_0",  "normal"),
 
     # other
-    "punctuation":     ("fg_2",  "normal"),
+    "punctuation":     ("fg_1",  "bold"),
 }
