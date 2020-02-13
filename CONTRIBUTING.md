@@ -25,5 +25,5 @@ Generate a config file from a palette and template:
 
     python3 build_theme.py \
         --palette palettes/limestone.py \
-        --template vscode-template.json.j2 \
+        --template example-template.j2 \
         --styling token_styling_dual.py
