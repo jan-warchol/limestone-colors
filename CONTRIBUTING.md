@@ -77,3 +77,10 @@ To quickly iterate over a color scheme in VScode, use local overrides
                     }
             }
     }
+
+
+
+Also, for comparison set theme per workspace
+
+add git worktree
+
