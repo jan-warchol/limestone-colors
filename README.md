@@ -1,7 +1,9 @@
 Limestone syntax highlighting
 -----------------------------
 
-_Limestone_ is a family of color themes for IDEs and text editors.
+_Limestone_ is a family of color themes for IDEs and text editors, based on
+experience I gained when [redesigning
+Solarized](https://github.com/jan-warchol/selenized/).
 
 ![limestone logo](https://i.imgur.com/V6rZL00.png)
 
@@ -10,10 +12,9 @@ much information about the tokens as possible (thus enhancing the understanding
 of the code), but do it in a clear, organized way, without overwhelming the
 reader with too many intense colors.
 
-It's currently in active development, approaching beta release. **See
-[`devel`](https://github.com/jan-warchol/monochrome-syntax/tree/devel) branch
-for current state of work.**
-
+Maturity: close to beta release. Current status: paused until
+[Selenized](https://github.com/jan-warchol/selenized/) becomes stable (expected
+to happen in Q2 2020).
 
 Features
 --------
