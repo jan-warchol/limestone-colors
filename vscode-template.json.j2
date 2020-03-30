@@ -41,9 +41,12 @@
 			}
 		},
 		{
+			{#- TODO? shell interpolation may need separate style #}
 			"name": "string interpolation and escaping",
 			"scope": [
 				"string.constant.character.escape",
+				"string.interpolated.dollar.shell",
+				"string.interpolated.backtick.shell",
 				"constant.character.format",
 				"constant.character.escape",
 				"punctuation.section.embedded",
@@ -202,6 +205,35 @@
 			"scope": "variable.parameter",
 			"settings": {
 				{{ parameter.vscode }}
+			}
+		},
+		{
+			{#- These are highlighted like keywords by convention #}
+			"name": "shell builtins",
+			"scope": "support.function.builtin.shell",
+			"settings": {
+				{{ keyword.vscode }}
+			}
+		},
+		{
+			"name": "special shell syntax",
+			"scope": [
+				"punctuation.definition.logical-expression",
+				"variable.other.special.shell"
+			],
+			"settings": {
+				{{ shell_special.vscode }}
+			}
+		},
+		{
+			"name": "shell variable interpolation",
+			"scope": [
+				"variable.other.normal.shell",
+				"variable.other.bracket.shell",
+				"variable.other.positional.shell"
+			],
+			"settings": {
+				{{ shell_var.vscode }}
 			}
 		},
 		{
