@@ -96,20 +96,30 @@
 			}
 		},
 		{
-			"name": "keywords (including function and class defs)",
+			"name": "generic keywords",
 			"scope": [
 				"keyword.control",
-				"storage.type.function",
-				"storage.type.class"
+				"keyword.other"
 			],
 			"settings": {
 				{{ keyword.vscode }}
 			}
 		},
 		{
+			"name": "function and class defs",
+			"scope": [
+				"storage.type.function",
+				"storage.type.class"
+			],
+			"settings": {
+				{{ keyword_def.vscode }}
+			}
+		},
+		{
 			"name": "imports",
 			"scope": [
 				"keyword.control.import",
+				"keyword.control.directive.include",
 				"keyword.other.import"
 			],
 			"settings": {
@@ -117,10 +127,30 @@
 			}
 		},
 		{
-			"name": "types and type modifiers",
-			"scope": "storage",
+			"name": "imported package/module names",
+			"scope": [
+				"storage.modifier.import.java"
+			],
+			"settings": {
+				"foreground": "#{{ fg_0 }}"
+			}
+		},
+		{
+			"name": "types",
+			"scope": [
+				"storage",
+				"support.class",
+				"support.type"
+			],
 			"settings": {
 				{{ type.vscode }}
+			}
+		},
+		{
+			"name": "type modifiers (const, public, etc)",
+			"scope": "storage.modifier",
+			"settings": {
+				{{ type_modifier.vscode }}
 			}
 		},
 		{
