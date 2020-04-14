@@ -8,7 +8,8 @@ _Limestone_ is a family of color themes for IDEs and text editors.
 Project goal is to design the **most readable** syntax highlighting - convey as
 much information about the tokens as possible (thus enhancing the understanding
 of the code), but do it in a clear, organized way, without overwhelming the
-reader with too many intense colors.
+reader with too many intense colors. Based on years of experience gained
+developing selenized, it offers unmatched readability.
 
 It's currently in active development, approaching beta release. **See
 [`devel`](https://github.com/jan-warchol/monochrome-syntax/tree/devel) branch
