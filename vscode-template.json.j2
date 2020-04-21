@@ -22,12 +22,6 @@
 			}
 		},
 		{
-			"scope": "string",
-			"settings": {
-				{{ string.vscode }}
-			}
-		},
-		{
 			"scope": "string.quoted.docstring",
 			"settings": {
 				{{ doc_comment.vscode }}
@@ -38,6 +32,12 @@
 			"scope": "storage.type.class.jsdoc",
 			"settings": {
 				{{ doc_special.vscode }}
+			}
+		},
+		{
+			"scope": "string",
+			"settings": {
+				{{ string.vscode }}
 			}
 		},
 		{
@@ -87,6 +87,12 @@
 			}
 		},
 		{
+			"scope": "keyword.operator",
+			"settings": {
+				{{ operator.vscode }}
+			}
+		},
+		{
 			"name": "keywords (including function and class defs)",
 			"scope": [
 				"keyword.control",
@@ -105,12 +111,6 @@
 			],
 			"settings": {
 				{{ import.vscode }}
-			}
-		},
-		{
-			"scope": "keyword.operator",
-			"settings": {
-				{{ operator.vscode }}
 			}
 		},
 		{
