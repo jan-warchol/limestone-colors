@@ -17,8 +17,8 @@ rules = {
     # literals and constants
     "string":          ("cyan", "normal"),
     "str_special":     ("red",  "normal"),
-    "number":          ("cyan",  "normal"),
-    "boolean":         ("cyan",  "normal"),
+    "number":          ("magenta",  "normal"),
+    "boolean":         ("violet",  "normal"),
     "constant":        ("cyan", "normal"),
 
     # language reserved words
@@ -31,11 +31,11 @@ rules = {
     "type":            ("green", "normal"),
     "type_modifier":   ("green", "italic"),
     "keyword_arg":     ("fg_0", "normal"),
-    "special_var":     ("red", "normal"),
+    "special_var":     ("green", "normal"),
 
     # elements that are usually predefined
     "built_in":        ("blue",  "normal"),
-    "exception":       ("yellow",  "normal"),
+    "exception":       ("orange",  "normal"),
     "decorator":       ("blue",  "normal"),
 
     # elements that are usually user-defined
@@ -45,7 +45,7 @@ rules = {
     # some grammars use one scope for function definitions and calls
     "function":        ("blue",  "normal"),
     "parameter":       ("fg_0",  "normal"),
-    "shell_var":       ("orange", "normal"),
+    "shell_var":       ("green", "normal"),
     "shell_special":   ("red", "normal"),
 
     # other
